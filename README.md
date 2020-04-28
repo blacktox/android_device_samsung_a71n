@@ -1,1 +1,4 @@
-# android_device_am_a805f
+# android_device_sm_a805f
+
+
+
