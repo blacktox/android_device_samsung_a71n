@@ -1,7 +1,7 @@
 # android_device_samsung_r1q
 
 # Inherit R1Q
-$(call inherit-product, device/samsung/sm_a805f/device.mk)
+$(call inherit-product, device/samsung/r1q/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
