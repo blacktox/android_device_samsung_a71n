@@ -1,6 +1,14 @@
 [
   {
+    "remote":"github",
     "repository": "android_device_samsung_qcom-common",
-    "target_path": "device/samsung/qcom-common"
-  }
+    "target_path": "device/samsung/qcom-common",
+    "revision": "lineage-17.1"
+  },
+  {
+		"remote": "github",
+		"repository": "firemax13/android_kernel_samsung_sm6150",
+		"target_path": "kernel/samsung/sm6150",
+		"revision": "fixing-area"
+	}
 ]
