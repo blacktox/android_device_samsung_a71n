@@ -1,3 +1,3 @@
-# android_device_sm_a805f
+# android_device_samsung_r1q
 
-device tree for sm_a805f based on android Q
+## device tree for r1q based on android Q
