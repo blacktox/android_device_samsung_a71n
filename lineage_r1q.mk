@@ -1,9 +1,9 @@
 # android_device_samsung_r1q
 
-# Inherit R1Q
+# Inherit some stuff
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product, device/samsung/r1q/device.mk)
-
-# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
@@ -11,4 +11,12 @@ PRODUCT_NAME := lineage_r1q
 PRODUCT_DEVICE := r1q
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
+
+BUILD_FINGERPRINT := "samsung/r1qxx/r1q:10/QP1A.190711.020/A805FXXU4BTC3:user/release-keys"
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="r1qxx-user 10 QP1A.190711.020 A805FXXU4BTC3 release-keys" \
+    PRODUCT_NAME="r1q" \
+    TARGET_DEVICE="r1q"
+
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
