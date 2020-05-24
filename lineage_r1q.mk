@@ -10,6 +10,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_NAME := lineage_r1q
 PRODUCT_DEVICE := r1q
 PRODUCT_BRAND := samsung
+PRODUCT_MODEL := SM-A805
 PRODUCT_MANUFACTURER := samsung
 
 BUILD_FINGERPRINT := "samsung/r1qxx/r1q:10/QP1A.190711.020/A805FXXU4BTC3:user/release-keys"
