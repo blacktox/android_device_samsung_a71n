@@ -1,3 +1,9 @@
 # android_device_samsung_r1q
 
-## device tree for r1q based on android Q
+#### Alpha stage device tree
+
+#### Note:
+- This is still alpha stage which it has tons to finish and to retrieve.
+- Help us building this tree, just compare and reffer from the same device and push some files from stock firmware
+
+
