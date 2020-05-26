@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#define LOG_TAG "vendor.samsung.hardware.biometrics.fingerprint@2.1-service.a70q"
+#define LOG_TAG "vendor.samsung.hardware.biometrics.fingerprint@3.0-service.r1q"
 
 #include <android-base/logging.h>
 
@@ -32,10 +32,10 @@ namespace samsung {
 namespace hardware {
 namespace biometrics {
 namespace fingerprint {
-namespace V2_1 {
+namespace V3_0 {
 namespace implementation {
 
-using RequestStatus = android::hardware::biometrics::fingerprint::V2_1::RequestStatus;
+using RequestStatus = android::hardware::biometrics::fingerprint::V3_0::RequestStatus;
 
 ISecBiometricsFingerprint* SecBiometricsFingerprint::sInstance = nullptr;
 
@@ -379,9 +379,9 @@ void SecBiometricsFingerprint::notify(const fingerprint_msg_t* msg) {
 }
 
 }  // namespace implementation
-}  // namespace V2_1
+}  // namespace V3_0
 }  // namespace fingerprint
 }  // namespace biometrics
 }  // namespace hardware
 }  // namespace samsung
-}  // namespace vendo
+}  // namespace vendor
