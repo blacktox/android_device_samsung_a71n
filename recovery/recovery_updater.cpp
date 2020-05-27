@@ -35,7 +35,7 @@ Value *VerifyBootloader(const char *name, State *state,
   }
   int8_t supported_bootloader = supported_bootloader_arg[0] - '0';
 
-  size_t offset = bootloader.find("A705");
+  size_t offset = bootloader.find("A805");
   if (offset == std::string::npos) {
     return ErrorAbort(state, kArgsParsingFailure,
                       "%s() failed to parse current bootloader version", name);
@@ -57,6 +57,6 @@ Value *VerifyBootloader(const char *name, State *state,
   return StringValue(std::to_string(ret));
 }
 
-void Register_librecovery_updater_a70q() {
-  RegisterFunction("a70q.verify_bootloader", VerifyBootloader);
+void Register_librecovery_updater_r1q() {
+  RegisterFunction("r1q.verify_bootloader", VerifyBootloader);
 }
