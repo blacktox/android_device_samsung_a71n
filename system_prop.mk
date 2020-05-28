@@ -1,3 +1,5 @@
+# android_device_samsung_r1q
+
 # Bluetooth
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.bluetooth.disableabsvol=true \
@@ -25,11 +27,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.stagefright.enable-fma2dp=true \
     media.settings.xml=/vendor/etc/media_profiles_V1_0.xml \
     persist.mm.enable.prefetch=true
-
-# NetFlix
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.netflix.bsp_rev=Q6150-17263-1
-
+    
 # SDCard
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.sys.sdcardfs=true
