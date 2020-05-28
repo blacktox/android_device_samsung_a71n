@@ -3,9 +3,10 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+# android_device_samsung_r1q
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/a70q/a70q-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/r1q/r1q-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -135,22 +136,24 @@ PRODUCT_PACKAGES += \
 
 # Display/Graphics
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.2-impl \
-    android.hardware.graphics.composer@2.2-service \
+    android.hardware.graphics.composer@2.3-impl \
+    android.hardware.graphics.composer@2.3-service \
     android.hardware.graphics.mapper@2.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     libdisplayconfig \
-    vendor.qti.hardware.display.allocator@1.0-service \
+    vendor.qti.hardware.display.allocator@2.0-service \
     vendor.display.config@1.0.vendor \
     vendor.display.config@1.1.vendor \
+    vendor.display.config@1.10.vendor \
     vendor.display.config@1.2.vendor \
     vendor.display.config@1.3.vendor \
     vendor.display.config@1.4.vendor \
     vendor.display.config@1.5.vendor \
     vendor.display.config@1.6.vendor \
     vendor.display.config@1.7.vendor \
-    vendor.display.config@1.8.vendor
+    vendor.display.config@1.8.vendor \
+    vendor.display.config@1.9.vendor
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -164,8 +167,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint feature
 PRODUCT_PACKAGES += \
-    vendor.samsung.hardware.biometrics.fingerprint@2.1-service.a70q \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.a70q
+    vendor.samsung.hardware.biometrics.fingerprint@3.0-service.r1q \
+    vendor.lineage.biometrics.fingerprint.inscreen@3.0-service.r1q
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
@@ -222,13 +225,13 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service \
-    android.hardware.light@2.0-impl \
+    android.hardware.light@3.0-service \
+    android.hardware.light@3.0-impl \
     lights.qcom
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.samsung-a70q
+    vendor.lineage.livedisplay@3.0-service.samsung-r1q
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -325,8 +328,8 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.3-radio-service.a70q \
-    vendor.samsung.hardware.radio@1.2.vendor \
+    android.hardware.radio@1.3-radio-service.r1q \
+    vendor.samsung.hardware.radio@2.0.vendor \
     android.hardware.radio.config@1.0 \
     libjson \
     librmnetctl \
@@ -341,7 +344,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensor
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl.a70q \
+    android.hardware.sensors@1.0-impl.r1q \
     android.hardware.sensors@1.0-service
 
 # Sensor Configuration
@@ -380,8 +383,8 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl \
-    android.hardware.vibrator@1.0-service
+    android.hardware.vibrator@2.0-impl \
+    android.hardware.vibrator@2.0-service
 
 # VNDK-SP
 PRODUCT_PACKAGES += \
@@ -395,7 +398,7 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     wpa_supplicant \
     wpa_supplicant.conf \
-    vendor.qti.hardware.wifi.hostapd@1.0.vendor \
+    vendor.qti.hardware.wifi.hostapd@2.0.vendor \
     vendor.qti.hardware.wifi.supplicant@2.0.vendor
 
 PRODUCT_COPY_FILES += \
