@@ -1,3 +1,5 @@
+# android_device_samsung_r1q
+
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
