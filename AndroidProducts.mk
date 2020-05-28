@@ -1,3 +1,8 @@
+#
+# Copyright (C) 2019 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
 # android_device_samsung_r1q
 
 PRODUCT_MAKEFILES := \

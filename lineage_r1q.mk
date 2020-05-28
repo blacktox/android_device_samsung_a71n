@@ -1,6 +1,12 @@
+#
+# Copyright (C) 2019 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
 # android_device_samsung_r1q
 
 # Inherit some stuff
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product, device/samsung/r1q/device.mk)
