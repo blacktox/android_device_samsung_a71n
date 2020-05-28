@@ -225,20 +225,17 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 TARGET_USES_MKE2FS := true
 
-# QCOM
-BOARD_USES_QCOM_HARDWARE := true
-
 # Recovery
 BOARD_HAS_DOWNLOAD_MODE := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
-TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := efs omr
 
 # Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_a70q
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_r1q
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # RenderScript
@@ -249,7 +246,7 @@ BOARD_PROVIDES_LIBRIL := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security
-VENDOR_SECURITY_PATCH := 2018-08-05
+VENDOR_SECURITY_PATCH := 2020-02-01
 
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
@@ -269,4 +266,4 @@ WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
--include vendor/samsung/a70q/BoardConfigVendor.mk
+-include vendor/samsung/r1q/BoardConfigVendor.mk
