@@ -1,4 +1,4 @@
-Copyright (C) 2020 LINEAGEOS
+Copyright (C) 2020 LineageOS
 
   Device configuration for Samsung Galaxy A80 SM-A805
  =========================================
@@ -19,3 +19,5 @@ Copyright (C) 2020 LINEAGEOS
  Display | 6.39 inches, 100.2 cm2 (~86.1% screen-to-body ratio)
  Rear camera  | 48 MP, f/1.8, 26mm (wide), 1/2", 0.8µm, PDAF & 8 MP, f/2.4, 53mm (telephoto), 1/4", 1.12µm, PDAF, 2x optical zoom & 13 MP, f/2.4, 12mm (ultrawide), 1/3", 1.12µm
  Front camera  | Motorized pop-up 20 MP, f/2.2, 0.8µm
+
+## android_device_samsung_r1q
