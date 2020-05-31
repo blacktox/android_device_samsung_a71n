@@ -10,4 +10,26 @@
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
-// limitations under the License.
+// limitations under the License. android_device_samsung_r1q
+
+cc_binary {
+    name: "vendor.lineage.livedisplay@2.0-service.samsung-r1q",
+    init_rc: ["vendor.lineage.livedisplay@2.0-service.samsung-r1q.rc"],
+    defaults: ["hidl_defaults"],
+    relative_install_path: "hw",
+    srcs: [
+        "AdaptiveBacklight.cpp",
+        "DisplayModes.cpp",
+        "SunlightEnhancement.cpp",
+        "service.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+        "libbinder",
+        "libhidlbase",
+        "libhidltransport",
+        "libutils",
+        "vendor.lineage.livedisplay@2.0",
+    ],
+    vendor: true,
+}
