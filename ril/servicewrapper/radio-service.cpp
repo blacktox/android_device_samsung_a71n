@@ -14,17 +14,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#define LOG_TAG "android.hardware.radio@1.3-radio-service.a70q"
+#define LOG_TAG "android.hardware.radio@2_0-radio-service.r1q"
 
-#include <android/hardware/radio/1.3/IRadio.h>
+#include <android/hardware/radio/2_0/IRadio.h>
 #include <hidl/HidlTransportSupport.h>
 
 #include "Radio.h"
 
 using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
-using android::hardware::radio::V1_3::IRadio;
-using android::hardware::radio::V1_3::implementation::Radio;
+using android::hardware::radio::V2_0::IRadio;
+using android::hardware::radio::V2_0::implementation::Radio;
 using android::sp;
 using android::status_t;
 using android::OK;
@@ -34,10 +34,10 @@ int main() {
 
     sp<IRadio> radio = new Radio(RIL1_SERVICE_NAME);
     status_t status = radio->registerAsService(RIL1_SERVICE_NAME);
-    ALOGW_IF(status != OK, "Could not register IRadio v1.3 %s", RIL1_SERVICE_NAME);
+    ALOGW_IF(status != OK, "Could not register IRadio v2_0 %s", RIL1_SERVICE_NAME);
     radio = new Radio(RIL2_SERVICE_NAME);
     status = radio->registerAsService(RIL2_SERVICE_NAME);
-    ALOGW_IF(status != OK, "Could not register IRadio v1.3 %s", RIL2_SERVICE_NAME);
+    ALOGW_IF(status != OK, "Could not register IRadio v2_0 %s", RIL2_SERVICE_NAME);
     ALOGD("Default service is ready.");
 
     joinRpcThreadpool();
