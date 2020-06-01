@@ -10,5 +10,11 @@
     "repository": "firemax13/android_kernel_samsung_sm6150",
     "target_path": "kernel/samsung/sm6150",
     "revision": "fixing-area"
+  },
+  {
+    "remote": "github",
+    "repository: "LineageOS/android_device_qcom_sepolicy",
+    "target_path": "device/qcom/sepolicy",
+    "revision": "lineage-17.1"
   }
 ]
