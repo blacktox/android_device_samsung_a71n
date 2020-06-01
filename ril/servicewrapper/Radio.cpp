@@ -19,39 +19,39 @@
 namespace android {
 namespace hardware {
 namespace radio {
-namespace V1_3 {
+namespace V2_0 {
 namespace implementation {
 
 Radio::Radio(const std::string& interfaceName) : interfaceName(interfaceName) {
 }
 
-sp<::vendor::samsung::hardware::radio::V1_2::IRadio> Radio::getSecIRadio() {
+sp<::vendor::samsung::hardware::radio::V2_0::IRadio> Radio::getSecIRadio() {
     std::lock_guard<std::mutex> lock(secIRadioMutex);
     if (!secIRadio) {
-        secIRadio = ::vendor::samsung::hardware::radio::V1_2::IRadio::getService(interfaceName);
+        secIRadio = ::vendor::samsung::hardware::radio::V2_0::IRadio::getService(interfaceName);
     }
     return secIRadio;
 }
 
-sp<::android::hardware::audio::V5_0::IPrimaryDevice> Radio::getAudioDevice() {
+sp<::android::hardware::audio::V2_0::IPrimaryDevice> Radio::getAudioDevice() {
     std::lock_guard<std::mutex> lock(audioDeviceMutex);
     if (!audioDevice) {
-        ::android::hardware::audio::V5_0::IDevicesFactory::getService()->openPrimaryDevice(
-                [&](::android::hardware::audio::V5_0::Result, const sp<::android::hardware::audio::V5_0::IPrimaryDevice>& result) {
+        ::android::hardware::audio::V2_0::IDevicesFactory::getService()->openPrimaryDevice(
+                [&](::android::hardware::audio::V2_0::Result, const sp<::android::hardware::audio::V2_0::IPrimaryDevice>& result) {
                     audioDevice = result;
                 });
     }
     return audioDevice;
 }
 
-// Methods from ::android::hardware::radio::V1_0::IRadio follow.
-Return<void> Radio::setResponseFunctions(const sp<::android::hardware::radio::V1_0::IRadioResponse>& radioResponse, const sp<::android::hardware::radio::V1_0::IRadioIndication>& radioIndication) {
-    sp<::vendor::samsung::hardware::radio::V1_2::IRadioResponse> secRadioResponse =
+// Methods from ::android::hardware::radio::V2_0::IRadio follow.
+Return<void> Radio::setResponseFunctions(const sp<::android::hardware::radio::V2_0::IRadioResponse>& radioResponse, const sp<::android::hardware::radio::V2_0::IRadioIndication>& radioIndication) {
+    sp<::vendor::samsung::hardware::radio::V2_0::IRadioResponse> secRadioResponse =
             new SecRadioResponse(interfaceName == RIL1_SERVICE_NAME ? 1 : 2, getAudioDevice(),
-                    ::android::hardware::radio::V1_2::IRadioResponse::castFrom(radioResponse)
+                    ::android::hardware::radio::V2_0::IRadioResponse::castFrom(radioResponse)
                     .withDefault(nullptr));
-    sp<::vendor::samsung::hardware::radio::V1_2::IRadioIndication> secRadioIndication =
-            new SecRadioIndication(::android::hardware::radio::V1_2::IRadioIndication::castFrom(radioIndication)
+    sp<::vendor::samsung::hardware::radio::V2_0::IRadioIndication> secRadioIndication =
+            new SecRadioIndication(::android::hardware::radio::V2_0::IRadioIndication::castFrom(radioIndication)
                     .withDefault(nullptr));
     getSecIRadio()->setResponseFunctions(secRadioResponse, secRadioIndication);
     return Void();
@@ -102,7 +102,7 @@ Return<void> Radio::getCurrentCalls(int32_t serial) {
     return Void();
 }
 
-Return<void> Radio::dial(int32_t serial, const ::android::hardware::radio::V1_0::Dial& dialInfo) {
+Return<void> Radio::dial(int32_t serial, const ::android::hardware::radio::V2_0::Dial& dialInfo) {
     getSecIRadio()->dial(serial, dialInfo);
     return Void();
 }
@@ -177,22 +177,22 @@ Return<void> Radio::sendDtmf(int32_t serial, const hidl_string& s) {
     return Void();
 }
 
-Return<void> Radio::sendSms(int32_t serial, const ::android::hardware::radio::V1_0::GsmSmsMessage& message) {
+Return<void> Radio::sendSms(int32_t serial, const ::android::hardware::radio::V2_0::GsmSmsMessage& message) {
     getSecIRadio()->sendSms(serial, message);
     return Void();
 }
 
-Return<void> Radio::sendSMSExpectMore(int32_t serial, const ::android::hardware::radio::V1_0::GsmSmsMessage& message) {
+Return<void> Radio::sendSMSExpectMore(int32_t serial, const ::android::hardware::radio::V2_0::GsmSmsMessage& message) {
     getSecIRadio()->sendSMSExpectMore(serial, message);
     return Void();
 }
 
-Return<void> Radio::setupDataCall(int32_t serial, ::android::hardware::radio::V1_0::RadioTechnology radioTechnology, const ::android::hardware::radio::V1_0::DataProfileInfo& dataProfileInfo, bool modemCognitive, bool roamingAllowed, bool isRoaming) {
+Return<void> Radio::setupDataCall(int32_t serial, ::android::hardware::radio::V2_0::RadioTechnology radioTechnology, const ::android::hardware::radio::V2_0::DataProfileInfo& dataProfileInfo, bool modemCognitive, bool roamingAllowed, bool isRoaming) {
     getSecIRadio()->setupDataCall(serial, radioTechnology, dataProfileInfo, modemCognitive, roamingAllowed, isRoaming);
     return Void();
 }
 
-Return<void> Radio::iccIOForApp(int32_t serial, const ::android::hardware::radio::V1_0::IccIo& iccIo) {
+Return<void> Radio::iccIOForApp(int32_t serial, const ::android::hardware::radio::V2_0::IccIo& iccIo) {
     getSecIRadio()->iccIOForApp(serial, iccIo);
     return Void();
 }
@@ -217,12 +217,12 @@ Return<void> Radio::setClir(int32_t serial, int32_t status) {
     return Void();
 }
 
-Return<void> Radio::getCallForwardStatus(int32_t serial, const ::android::hardware::radio::V1_0::CallForwardInfo& callInfo) {
+Return<void> Radio::getCallForwardStatus(int32_t serial, const ::android::hardware::radio::V2_0::CallForwardInfo& callInfo) {
     getSecIRadio()->getCallForwardStatus(serial, callInfo);
     return Void();
 }
 
-Return<void> Radio::setCallForward(int32_t serial, const ::android::hardware::radio::V1_0::CallForwardInfo& callInfo) {
+Return<void> Radio::setCallForward(int32_t serial, const ::android::hardware::radio::V2_0::CallForwardInfo& callInfo) {
     getSecIRadio()->setCallForward(serial, callInfo);
     return Void();
 }
@@ -237,7 +237,7 @@ Return<void> Radio::setCallWaiting(int32_t serial, bool enable, int32_t serviceC
     return Void();
 }
 
-Return<void> Radio::acknowledgeLastIncomingGsmSms(int32_t serial, bool success, ::android::hardware::radio::V1_0::SmsAcknowledgeFailCause cause) {
+Return<void> Radio::acknowledgeLastIncomingGsmSms(int32_t serial, bool success, ::android::hardware::radio::V2_0::SmsAcknowledgeFailCause cause) {
     getSecIRadio()->acknowledgeLastIncomingGsmSms(serial, success, cause);
     return Void();
 }
@@ -332,7 +332,7 @@ Return<void> Radio::setSuppServiceNotifications(int32_t serial, bool enable) {
     return Void();
 }
 
-Return<void> Radio::writeSmsToSim(int32_t serial, const ::android::hardware::radio::V1_0::SmsWriteArgs& smsWriteArgs) {
+Return<void> Radio::writeSmsToSim(int32_t serial, const ::android::hardware::radio::V2_0::SmsWriteArgs& smsWriteArgs) {
     getSecIRadio()->writeSmsToSim(serial, smsWriteArgs);
     return Void();
 }
@@ -342,7 +342,7 @@ Return<void> Radio::deleteSmsOnSim(int32_t serial, int32_t index) {
     return Void();
 }
 
-Return<void> Radio::setBandMode(int32_t serial, ::android::hardware::radio::V1_0::RadioBandMode mode) {
+Return<void> Radio::setBandMode(int32_t serial, ::android::hardware::radio::V2_0::RadioBandMode mode) {
     getSecIRadio()->setBandMode(serial, mode);
     return Void();
 }
@@ -372,7 +372,7 @@ Return<void> Radio::explicitCallTransfer(int32_t serial) {
     return Void();
 }
 
-Return<void> Radio::setPreferredNetworkType(int32_t serial, ::android::hardware::radio::V1_0::PreferredNetworkType nwType) {
+Return<void> Radio::setPreferredNetworkType(int32_t serial, ::android::hardware::radio::V2_0::PreferredNetworkType nwType) {
     getSecIRadio()->setPreferredNetworkType(serial, nwType);
     return Void();
 }
@@ -392,12 +392,12 @@ Return<void> Radio::setLocationUpdates(int32_t serial, bool enable) {
     return Void();
 }
 
-Return<void> Radio::setCdmaSubscriptionSource(int32_t serial, ::android::hardware::radio::V1_0::CdmaSubscriptionSource cdmaSub) {
+Return<void> Radio::setCdmaSubscriptionSource(int32_t serial, ::android::hardware::radio::V2_0::CdmaSubscriptionSource cdmaSub) {
     getSecIRadio()->setCdmaSubscriptionSource(serial, cdmaSub);
     return Void();
 }
 
-Return<void> Radio::setCdmaRoamingPreference(int32_t serial, ::android::hardware::radio::V1_0::CdmaRoamingType type) {
+Return<void> Radio::setCdmaRoamingPreference(int32_t serial, ::android::hardware::radio::V2_0::CdmaRoamingType type) {
     getSecIRadio()->setCdmaRoamingPreference(serial, type);
     return Void();
 }
@@ -407,7 +407,7 @@ Return<void> Radio::getCdmaRoamingPreference(int32_t serial) {
     return Void();
 }
 
-Return<void> Radio::setTTYMode(int32_t serial, ::android::hardware::radio::V1_0::TtyMode mode) {
+Return<void> Radio::setTTYMode(int32_t serial, ::android::hardware::radio::V2_0::TtyMode mode) {
     getSecIRadio()->setTTYMode(serial, mode);
     return Void();
 }
@@ -437,12 +437,12 @@ Return<void> Radio::sendBurstDtmf(int32_t serial, const hidl_string& dtmf, int32
     return Void();
 }
 
-Return<void> Radio::sendCdmaSms(int32_t serial, const ::android::hardware::radio::V1_0::CdmaSmsMessage& sms) {
+Return<void> Radio::sendCdmaSms(int32_t serial, const ::android::hardware::radio::V2_0::CdmaSmsMessage& sms) {
     getSecIRadio()->sendCdmaSms(serial, sms);
     return Void();
 }
 
-Return<void> Radio::acknowledgeLastIncomingCdmaSms(int32_t serial, const ::android::hardware::radio::V1_0::CdmaSmsAck& smsAck) {
+Return<void> Radio::acknowledgeLastIncomingCdmaSms(int32_t serial, const ::android::hardware::radio::V2_0::CdmaSmsAck& smsAck) {
     getSecIRadio()->acknowledgeLastIncomingCdmaSms(serial, smsAck);
     return Void();
 }
@@ -452,7 +452,7 @@ Return<void> Radio::getGsmBroadcastConfig(int32_t serial) {
     return Void();
 }
 
-Return<void> Radio::setGsmBroadcastConfig(int32_t serial, const hidl_vec<::android::hardware::radio::V1_0::GsmBroadcastSmsConfigInfo>& configInfo) {
+Return<void> Radio::setGsmBroadcastConfig(int32_t serial, const hidl_vec<::android::hardware::radio::V2_0::GsmBroadcastSmsConfigInfo>& configInfo) {
     getSecIRadio()->setGsmBroadcastConfig(serial, configInfo);
     return Void();
 }
@@ -467,7 +467,7 @@ Return<void> Radio::getCdmaBroadcastConfig(int32_t serial) {
     return Void();
 }
 
-Return<void> Radio::setCdmaBroadcastConfig(int32_t serial, const hidl_vec<::android::hardware::radio::V1_0::CdmaBroadcastSmsConfigInfo>& configInfo) {
+Return<void> Radio::setCdmaBroadcastConfig(int32_t serial, const hidl_vec<::android::hardware::radio::V2_0::CdmaBroadcastSmsConfigInfo>& configInfo) {
     getSecIRadio()->setCdmaBroadcastConfig(serial, configInfo);
     return Void();
 }
@@ -482,7 +482,7 @@ Return<void> Radio::getCDMASubscription(int32_t serial) {
     return Void();
 }
 
-Return<void> Radio::writeSmsToRuim(int32_t serial, const ::android::hardware::radio::V1_0::CdmaSmsWriteArgs& cdmaSms) {
+Return<void> Radio::writeSmsToRuim(int32_t serial, const ::android::hardware::radio::V2_0::CdmaSmsWriteArgs& cdmaSms) {
     getSecIRadio()->writeSmsToRuim(serial, cdmaSms);
     return Void();
 }
@@ -557,7 +557,7 @@ Return<void> Radio::setCellInfoListRate(int32_t serial, int32_t rate) {
     return Void();
 }
 
-Return<void> Radio::setInitialAttachApn(int32_t serial, const ::android::hardware::radio::V1_0::DataProfileInfo& dataProfileInfo, bool modemCognitive, bool isRoaming) {
+Return<void> Radio::setInitialAttachApn(int32_t serial, const ::android::hardware::radio::V2_0::DataProfileInfo& dataProfileInfo, bool modemCognitive, bool isRoaming) {
     getSecIRadio()->setInitialAttachApn(serial, dataProfileInfo, modemCognitive, isRoaming);
     return Void();
 }
@@ -567,12 +567,12 @@ Return<void> Radio::getImsRegistrationState(int32_t serial) {
     return Void();
 }
 
-Return<void> Radio::sendImsSms(int32_t serial, const ::android::hardware::radio::V1_0::ImsSmsMessage& message) {
+Return<void> Radio::sendImsSms(int32_t serial, const ::android::hardware::radio::V2_0::ImsSmsMessage& message) {
     getSecIRadio()->sendImsSms(serial, message);
     return Void();
 }
 
-Return<void> Radio::iccTransmitApduBasicChannel(int32_t serial, const ::android::hardware::radio::V1_0::SimApdu& message) {
+Return<void> Radio::iccTransmitApduBasicChannel(int32_t serial, const ::android::hardware::radio::V2_0::SimApdu& message) {
     getSecIRadio()->iccTransmitApduBasicChannel(serial, message);
     return Void();
 }
@@ -587,17 +587,17 @@ Return<void> Radio::iccCloseLogicalChannel(int32_t serial, int32_t channelId) {
     return Void();
 }
 
-Return<void> Radio::iccTransmitApduLogicalChannel(int32_t serial, const ::android::hardware::radio::V1_0::SimApdu& message) {
+Return<void> Radio::iccTransmitApduLogicalChannel(int32_t serial, const ::android::hardware::radio::V2_0::SimApdu& message) {
     getSecIRadio()->iccTransmitApduLogicalChannel(serial, message);
     return Void();
 }
 
-Return<void> Radio::nvReadItem(int32_t serial, ::android::hardware::radio::V1_0::NvItem itemId) {
+Return<void> Radio::nvReadItem(int32_t serial, ::android::hardware::radio::V2_0::NvItem itemId) {
     getSecIRadio()->nvReadItem(serial, itemId);
     return Void();
 }
 
-Return<void> Radio::nvWriteItem(int32_t serial, const ::android::hardware::radio::V1_0::NvWriteItem& item) {
+Return<void> Radio::nvWriteItem(int32_t serial, const ::android::hardware::radio::V2_0::NvWriteItem& item) {
     getSecIRadio()->nvWriteItem(serial, item);
     return Void();
 }
@@ -607,12 +607,12 @@ Return<void> Radio::nvWriteCdmaPrl(int32_t serial, const hidl_vec<uint8_t>& prl)
     return Void();
 }
 
-Return<void> Radio::nvResetConfig(int32_t serial, ::android::hardware::radio::V1_0::ResetNvType resetType) {
+Return<void> Radio::nvResetConfig(int32_t serial, ::android::hardware::radio::V2_0::ResetNvType resetType) {
     getSecIRadio()->nvResetConfig(serial, resetType);
     return Void();
 }
 
-Return<void> Radio::setUiccSubscription(int32_t serial, const ::android::hardware::radio::V1_0::SelectUiccSub& uiccSub) {
+Return<void> Radio::setUiccSubscription(int32_t serial, const ::android::hardware::radio::V2_0::SelectUiccSub& uiccSub) {
     getSecIRadio()->setUiccSubscription(serial, uiccSub);
     return Void();
 }
@@ -632,7 +632,7 @@ Return<void> Radio::requestIccSimAuthentication(int32_t serial, int32_t authCont
     return Void();
 }
 
-Return<void> Radio::setDataProfile(int32_t serial, const hidl_vec<::android::hardware::radio::V1_0::DataProfileInfo>& profiles, bool isRoaming) {
+Return<void> Radio::setDataProfile(int32_t serial, const hidl_vec<::android::hardware::radio::V2_0::DataProfileInfo>& profiles, bool isRoaming) {
     getSecIRadio()->setDataProfile(serial, profiles, isRoaming);
     return Void();
 }
@@ -647,7 +647,7 @@ Return<void> Radio::getRadioCapability(int32_t serial) {
     return Void();
 }
 
-Return<void> Radio::setRadioCapability(int32_t serial, const ::android::hardware::radio::V1_0::RadioCapability& rc) {
+Return<void> Radio::setRadioCapability(int32_t serial, const ::android::hardware::radio::V2_0::RadioCapability& rc) {
     getSecIRadio()->setRadioCapability(serial, rc);
     return Void();
 }
@@ -672,7 +672,7 @@ Return<void> Radio::getModemActivityInfo(int32_t serial) {
     return Void();
 }
 
-Return<void> Radio::setAllowedCarriers(int32_t serial, bool allAllowed, const ::android::hardware::radio::V1_0::CarrierRestrictions& carriers) {
+Return<void> Radio::setAllowedCarriers(int32_t serial, bool allAllowed, const ::android::hardware::radio::V2_0::CarrierRestrictions& carriers) {
     getSecIRadio()->setAllowedCarriers(serial, allAllowed, carriers);
     return Void();
 }
@@ -682,12 +682,12 @@ Return<void> Radio::getAllowedCarriers(int32_t serial) {
     return Void();
 }
 
-Return<void> Radio::sendDeviceState(int32_t serial, ::android::hardware::radio::V1_0::DeviceStateType deviceStateType, bool state) {
+Return<void> Radio::sendDeviceState(int32_t serial, ::android::hardware::radio::V2_0::DeviceStateType deviceStateType, bool state) {
     getSecIRadio()->sendDeviceState(serial, deviceStateType, state);
     return Void();
 }
 
-Return<void> Radio::setIndicationFilter(int32_t serial, hidl_bitfield<::android::hardware::radio::V1_2::IndicationFilter> indicationFilter) {
+Return<void> Radio::setIndicationFilter(int32_t serial, hidl_bitfield<::android::hardware::radio::V2_0::IndicationFilter> indicationFilter) {
     getSecIRadio()->setIndicationFilter(serial, indicationFilter);
     return Void();
 }
@@ -703,18 +703,18 @@ Return<void> Radio::responseAcknowledgement() {
 }
 
 
-// Methods from ::android::hardware::radio::V1_1::IRadio follow.
-Return<void> Radio::setCarrierInfoForImsiEncryption(int32_t serial, const ::android::hardware::radio::V1_1::ImsiEncryptionInfo& imsiEncryptionInfo) {
+// Methods from ::android::hardware::radio::V2_0::IRadio follow.
+Return<void> Radio::setCarrierInfoForImsiEncryption(int32_t serial, const ::android::hardware::radio::V2_0::ImsiEncryptionInfo& imsiEncryptionInfo) {
     getSecIRadio()->setCarrierInfoForImsiEncryption(serial, imsiEncryptionInfo);
     return Void();
 }
 
-Return<void> Radio::setSimCardPower_1_1(int32_t serial, ::android::hardware::radio::V1_1::CardPowerState powerUp) {
+Return<void> Radio::setSimCardPower_1_1(int32_t serial, ::android::hardware::radio::V2_0::CardPowerState powerUp) {
     getSecIRadio()->setSimCardPower_1_1(serial, powerUp);
     return Void();
 }
 
-Return<void> Radio::startNetworkScan(int32_t serial, const ::android::hardware::radio::V1_1::NetworkScanRequest& request) {
+Return<void> Radio::startNetworkScan(int32_t serial, const ::android::hardware::radio::V2_0::NetworkScanRequest& request) {
     getSecIRadio()->startNetworkScan(serial, request);
     return Void();
 }
@@ -724,7 +724,7 @@ Return<void> Radio::stopNetworkScan(int32_t serial) {
     return Void();
 }
 
-Return<void> Radio::startKeepalive(int32_t serial, const ::android::hardware::radio::V1_1::KeepaliveRequest& keepalive) {
+Return<void> Radio::startKeepalive(int32_t serial, const ::android::hardware::radio::V2_0::KeepaliveRequest& keepalive) {
     getSecIRadio()->startKeepalive(serial, keepalive);
     return Void();
 }
@@ -736,38 +736,38 @@ Return<void> Radio::stopKeepalive(int32_t serial, int32_t sessionHandle) {
 
 
 // Methods from ::android::hardware::radio::V1_2::IRadio follow.
-Return<void> Radio::startNetworkScan_1_2(int32_t serial, const ::android::hardware::radio::V1_2::NetworkScanRequest& request) {
+Return<void> Radio::startNetworkScan_1_2(int32_t serial, const ::android::hardware::radio::2_0::NetworkScanRequest& request) {
     getSecIRadio()->startNetworkScan_1_2(serial, request);
     return Void();
 }
 
-Return<void> Radio::setIndicationFilter_1_2(int32_t serial, hidl_bitfield<::android::hardware::radio::V1_2::IndicationFilter> indicationFilter) {
+Return<void> Radio::setIndicationFilter_1_2(int32_t serial, hidl_bitfield<::android::hardware::radio::V2_0::IndicationFilter> indicationFilter) {
     getSecIRadio()->setIndicationFilter_1_2(serial, indicationFilter);
     return Void();
 }
 
-Return<void> Radio::setSignalStrengthReportingCriteria(int32_t serial, int32_t hysteresisMs, int32_t hysteresisDb, const hidl_vec<int32_t>& thresholdsDbm, ::android::hardware::radio::V1_2::AccessNetwork accessNetwork) {
+Return<void> Radio::setSignalStrengthReportingCriteria(int32_t serial, int32_t hysteresisMs, int32_t hysteresisDb, const hidl_vec<int32_t>& thresholdsDbm, ::android::hardware::radio::V2_0::AccessNetwork accessNetwork) {
     getSecIRadio()->setSignalStrengthReportingCriteria(serial, hysteresisMs, hysteresisDb, thresholdsDbm, accessNetwork);
     return Void();
 }
 
-Return<void> Radio::setLinkCapacityReportingCriteria(int32_t serial, int32_t hysteresisMs, int32_t hysteresisDlKbps, int32_t hysteresisUlKbps, const hidl_vec<int32_t>& thresholdsDownlinkKbps, const hidl_vec<int32_t>& thresholdsUplinkKbps, ::android::hardware::radio::V1_2::AccessNetwork accessNetwork) {
+Return<void> Radio::setLinkCapacityReportingCriteria(int32_t serial, int32_t hysteresisMs, int32_t hysteresisDlKbps, int32_t hysteresisUlKbps, const hidl_vec<int32_t>& thresholdsDownlinkKbps, const hidl_vec<int32_t>& thresholdsUplinkKbps, ::android::hardware::radio::V2_0::AccessNetwork accessNetwork) {
     getSecIRadio()->setLinkCapacityReportingCriteria(serial, hysteresisMs, hysteresisDlKbps, hysteresisUlKbps, thresholdsDownlinkKbps, thresholdsUplinkKbps, accessNetwork);
     return Void();
 }
 
-Return<void> Radio::setupDataCall_1_2(int32_t serial, ::android::hardware::radio::V1_2::AccessNetwork accessNetwork, const ::android::hardware::radio::V1_0::DataProfileInfo& dataProfileInfo, bool modemCognitive, bool roamingAllowed, bool isRoaming, ::android::hardware::radio::V1_2::DataRequestReason reason, const hidl_vec<hidl_string>& addresses, const hidl_vec<hidl_string>& dnses) {
+Return<void> Radio::setupDataCall_1_2(int32_t serial, ::android::hardware::radio::V2_0::AccessNetwork accessNetwork, const ::android::hardware::radio::V2_0::DataProfileInfo& dataProfileInfo, bool modemCognitive, bool roamingAllowed, bool isRoaming, ::android::hardware::radio::V2_0::DataRequestReason reason, const hidl_vec<hidl_string>& addresses, const hidl_vec<hidl_string>& dnses) {
     getSecIRadio()->setupDataCall_1_2(serial,accessNetwork, dataProfileInfo, modemCognitive, roamingAllowed, isRoaming, reason, addresses, dnses);
     return Void();
 }
 
-Return<void> Radio::deactivateDataCall_1_2(int32_t serial, int32_t cid, ::android::hardware::radio::V1_2::DataRequestReason reason) {
+Return<void> Radio::deactivateDataCall_1_2(int32_t serial, int32_t cid, ::android::hardware::radio::V2_0::DataRequestReason reason) {
     getSecIRadio()->deactivateDataCall_1_2(serial, cid, reason);
     return Void();
 }
 
-// Methods from ::android::hardware::radio::V1_3::IRadio follow.
-Return<void> Radio::setSystemSelectionChannels(int32_t, bool, const hidl_vec<::android::hardware::radio::V1_1::RadioAccessSpecifier>&) {
+// Methods from ::android::hardware::radio::V2_0::IRadio follow.
+Return<void> Radio::setSystemSelectionChannels(int32_t, bool, const hidl_vec<::android::hardware::radio::V2_0::RadioAccessSpecifier>&) {
     return Void();
 }
 
@@ -780,7 +780,7 @@ Return<void> Radio::getModemStackStatus(int32_t) {
 }
 
 }  // namespace implementation
-}  // namespace V1_3
+}  // namespace V2_0
 }  // namespace radio
 }  // namespace hardware
 }  // namespace android
