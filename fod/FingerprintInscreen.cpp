@@ -29,7 +29,7 @@
 #define SEM_FINGER_STATE 22
 #define SEM_PARAM_PRESSED 2
 #define SEM_PARAM_RELEASED 1
-#define SEM_AOSP_FQNAME "android.hardware.biometrics.fingerprint@2.1::IBiometricsFingerprint"
+#define SEM_AOSP_FQNAME "android.hardware.biometrics.fingerprint@3.0::IBiometricsFingerprint"
 
 namespace vendor {
 namespace lineage {
