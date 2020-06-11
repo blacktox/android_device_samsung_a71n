@@ -3,13 +3,17 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-# android_device_samsung_r1q
+# android_device_samsung_r1q #alpha_release
 
-# Inherit some stuff
+# Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
+
+# Inherit r1q device.
 $(call inherit-product, device/samsung/r1q/device.mk)
+
+# Inherit some needed stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
@@ -19,6 +23,7 @@ PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A805
 PRODUCT_MANUFACTURER := samsung
 
+# Device stuff, important needed stuff
 DEVICE_MAINTAINERS := "firemax13"
 
 BUILD_FINGERPRINT := "samsung/r1qxx/r1q:10/QP1A.190711.020/A805FXXU4BTC3:user/release-keys"
