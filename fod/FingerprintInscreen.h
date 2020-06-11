@@ -17,7 +17,7 @@
 #define VENDOR_LINEAGE_BIOMETRICS_FINGERPRINT_INSCREEN_V1_0_FINGERPRINTINSCREEN_H
 
 #include <vendor/lineage/biometrics/fingerprint/inscreen/1.0/IFingerprintInscreen.h>
-#include <vendor/samsung/hardware/biometrics/fingerprint/2.1/ISecBiometricsFingerprint.h>
+#include <vendor/samsung/hardware/biometrics/fingerprint/3.0/ISecBiometricsFingerprint.h>
 
 namespace vendor {
 namespace lineage {
@@ -31,7 +31,7 @@ using ::android::sp;
 using ::android::hardware::Return;
 using ::android::hardware::Void;
 using ::android::hardware::hidl_vec;
-using ::vendor::samsung::hardware::biometrics::fingerprint::V2_1::ISecBiometricsFingerprint;
+using ::vendor::samsung::hardware::biometrics::fingerprint::V3_0::ISecBiometricsFingerprint;
 
 class FingerprintInscreen : public IFingerprintInscreen {
   public:
