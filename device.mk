@@ -168,7 +168,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint feature
 PRODUCT_PACKAGES += \
     vendor.samsung.hardware.biometrics.fingerprint@3.0-service.r1q \
-    vendor.lineage.biometrics.fingerprint.inscreen@3.0-service.r1q
+    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.r1q
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
@@ -231,7 +231,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@3.0-service.samsung-r1q
+    vendor.lineage.livedisplay@2.0-service.samsung-r1q
 
 # Media
 PRODUCT_COPY_FILES += \
