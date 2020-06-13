@@ -8,6 +8,9 @@
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/samsung/r1q/r1q-vendor.mk)
 
+# Get non-open-source specific aspects (if porting use this instead)
+# $(call inherit-product-if-exists, vendor/samsung/r1q_ported/r1q-vendor.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     device/samsung/qcom-common/overlay \
