@@ -484,7 +484,10 @@ vendor/lib/camera/uw_dual_calibration.bin
 vendor/lib/camera/w_dual_calibration.bin
 vendor/lib/hw/camera.qcom.so
 vendor/lib/hw/com.samsung.chi.override.so
-vendor/lib/hw/vendor.samsung.hardware.camera.provider@3.0-impl.so
+vendor/lib/vendor.samsung.hardware.camera.provider@1.0-impl.so
+vendor/lib/vendor.samsung.hardware.camera.provider@4.0-impl.so
+vendor/lib/hw/vendor.samsung.hardware.camera.provider@1.0-impl.so
+vendor/lib/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so
 vendor/lib/libSNPE.so
 vendor/lib/libc++_shared.so
 vendor/lib/libcamera_nn_stub.so
@@ -525,6 +528,7 @@ vendor/lib/vendor.samsung.hardware.camera.device@3.3.so
 vendor/lib/vendor.samsung.hardware.camera.device@3.4.so
 vendor/lib/vendor.samsung.hardware.camera.provider@2.4.so
 vendor/lib/vendor.samsung.hardware.camera.provider@3.0.so
+vendor/lib/vendor.samsung.hardware.camera.provider@4.0.so
 vendor/lib64/camera.device@1.0-impl.so
 vendor/lib64/camera.device@3.2-impl.so
 vendor/lib64/camera.device@3.3-impl.so
@@ -609,7 +613,10 @@ vendor/lib64/camera/components/libdepthmapwrapper.so
 vendor/lib64/camera/components/libmmcamera_cac3.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.samsung.chi.override.so
-vendor/lib64/hw/vendor.samsung.hardware.camera.provider@3.0-impl.so
+vendor/lib64/vendor.samsung.hardware.camera.provider@1.0-impl.so
+vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-impl.so
+vendor/lib64/hw/vendor.samsung.hardware.camera.provider@1.0-impl.so
+vendor/lib64/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so
 vendor/lib64/libSNPE.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libcamera_nn_stub.so
@@ -651,6 +658,8 @@ vendor/lib64/vendor.samsung.hardware.camera.device@3.4.so
 vendor/lib64/vendor.samsung.hardware.camera.device@3.5.so
 vendor/lib64/vendor.samsung.hardware.camera.device@4.0.so
 vendor/lib64/vendor.samsung.hardware.camera.provider@2.4.so
+vendor/lib64/vendor.samsung.hardware.camera.provider@3.0.so
+vendor/lib64/vendor.samsung.hardware.camera.provider@4.0.so
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.elf
@@ -776,8 +785,6 @@ vendor/lib64/libhdcp2p2prov.so
 vendor/lib64/libhdcpsrm.so
 
 # DRM - Widevine
-vendor/bin/hw/android.hardware.drm@1.1-service.widevine
-vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
 vendor/lib/libwvhidl.so
@@ -870,19 +877,15 @@ vendor/lib/hw/vulkan.sm6150.so|fc62d26b4fa0234308a6fc6745e7903bae834b59
 vendor/lib64/hw/vulkan.sm6150.so|30b53d5bca63292898528ff5c796546d4fc3f9fa
 
 # GPS
-vendor/bin/hw/vendor.qti.gnss@2.1-service
 vendor/bin/hw/vendor.qti.gnss@2.0-service-qti
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
 vendor/bin/xtra-daemon
-vendor/etc/init/vendor.qti.gnss@2.1-service.rc
 vendor/etc/init/vendor.qti.gnss@2.0-service-qti.rc
 vendor/etc/cacert_location.pem
 vendor/etc/xtra_root_cert.pem
-vendor/lib/hw/android.hardware.gnss@1.1-impl-qti.so
 vendor/lib/hw/android.hardware.gnss@2.0-impl-qti.so
 vendor/lib/hw/vendor.qti.gnss@3.0-impl.so
-vendor/lib/hw/vendor.samsung.hardware.gnss@1.0-impl.so
 vendor/lib/hw/vendor.samsung.hardware.gnss@2.0-impl-sec.so
 vendor/lib/libdataitems.so
 vendor/lib/libfloatingfeature.so
@@ -910,11 +913,8 @@ vendor/lib/vendor.qti.gnss@2.0.so
 vendor/lib/vendor.qti.gnss@2.1.so
 vendor/lib/vendor.qti.gnss@3.0.so
 vendor/lib/vendor.samsung.hardware.gnss@2.0.so
-vendor/lib64/hw/android.hardware.gnss@1.1-impl-qti.so
 vendor/lib64/hw/android.hardware.gnss@2.0-impl-qti.so
-vendor/lib64/hw/vendor.qti.gnss@2.1-impl.so
 vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so
-vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
 vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl-sec.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libfloatingfeature.so
@@ -941,7 +941,6 @@ vendor/lib64/vendor.qti.gnss@1.2.so
 vendor/lib64/vendor.qti.gnss@2.0.so
 vendor/lib64/vendor.qti.gnss@2.1.so
 vendor/lib64/vendor.qti.gnss@3.0.so
-vendor/lib64/vendor.samsung.hardware.gnss@1.0.so
 vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 
 # Graphics (Adreno firmware)
@@ -953,21 +952,26 @@ vendor/firmware/a630_sqe.fw
 vendor/saiv/image_understanding/db/aic_classifier/aic_classifier_cnn.info
 vendor/saiv/image_understanding/db/aic_classifier/aic_classifier_cnn_light.caffemodel
 vendor/saiv/image_understanding/db/aic_classifier/aic_classifier_cnn.prototxt
+vendor/saiv/image_understanding/db/aic_classifier/aic_classifier_cnn.dlc
+vendor/saiv/image_understanding/db/aic_classifier/aic_classifier_cnn_tmp.info
 vendor/saiv/image_understanding/db/aic_detector/aic_detector_cnn.info
 vendor/saiv/image_understanding/db/aic_detector/aic_detector_cnn_light.caffemodel
 vendor/saiv/image_understanding/db/aic_detector/aic_detector_cnn.prototxt
+vendor/saiv/image_understanding/db/aic_detector/aic_detector_cnn.dlc
 vendor/saiv/image_understanding/db/aig_classifier/aig_classifier_cnn_light.caffemodel
 vendor/saiv/image_understanding/db/aig_classifier/aig_classifier_cnn.prototxt
 vendor/saiv/image_understanding/db/aig_detector/aig_detector_cnn_light.caffemodel
 vendor/saiv/image_understanding/db/aig_detector/aig_detector_cnn.prototxt
-vendor/saiv/image_understanding/db/food_verifier/food_verifier_cnn_light.caffemodel
-vendor/saiv/image_understanding/db/food_verifier/food_verifier_cnn.prototxt
-vendor/saiv/image_understanding/db/slens_classifier/slens_classifier_cnn.dlc
-vendor/saiv/image_understanding/db/slens_detector/slens_detector_cnn.dlc
-vendor/saiv/image_understanding/db/text_verifier/text_verifier_cnn_light.caffemodel
-vendor/saiv/image_understanding/db/text_verifier/text_verifier_cnn.prototxt
-vendor/saiv/image_understanding/db/wine_verifier/wine_verifier_cnn_light.caffemodel
-vendor/saiv/image_understanding/db/wine_verifier/wine_verifier_cnn.prototxt
+vendor/saiv/image_understanding/db/COMMON_CPU_BV3.0FV/5.8.3/food_verifier_cnn.prototxt
+vendor/saiv/image_understanding/db/COMMON_CPU_BV3.0FV/5.8.3/food_verifier_cnn_light.caffemodel
+vendor/saiv/image_understanding/db/COMMON_CPU_BV3.0PV/5.8.3/movie_poster_verifier_cnn.prototxt
+vendor/saiv/image_understanding/db/COMMON_CPU_BV3.0PV/5.8.3/movie_poster_verifier_cnn_light.caffemodel
+vendor/saiv/image_understanding/db/COMMON_CPU_BV3.0TV/5.8.3/text_verifier_cnn.prototxt
+vendor/saiv/image_understanding/db/COMMON_CPU_BV3.0TV/5.8.3/text_verifier_cnn_light.caffemodel
+vendor/saiv/image_understanding/db/COMMON_CPU_BV3.0WV/5.8.3/wine_verifier_cnn.prototxt
+vendor/saiv/image_understanding/db/COMMON_CPU_BV3.0WV/5.8.3/wine_verifier_cnn_light.caffemodel
+vendor/saiv/image_understanding/db/QC_DSP_1.33.2_BV3.0OD/5.8.3/slens_detector_cnn.dlc
+vendor/saiv/image_understanding/db/QC_NPU_1.33.2_BV3.0CLS/5.8.3/slens_detector_cnn.dlc
 
 # Radio - IMS
 #etc/permissions/rcsopenapi_library.xml
@@ -975,8 +979,10 @@ vendor/saiv/image_understanding/db/wine_verifier/wine_verifier_cnn.prototxt
 #-priv-app/imsservice/imsservice.apk
 #etc/permissions/privapp-permissions-com.sec.ims.xml
 #etc/permissions/privapp-permissions-com.sec.imsservice.xml
-#vendor/lib/com.qualcomm.qti.uceservice@2.0.so
-#vendor/lib64/com.qualcomm.qti.uceservice@2.0.so
+vendor/lib/com.qualcomm.qti.uceservice@2.0.so
+vendor/lib64/com.qualcomm.qti.uceservice@2.0.so
+vendor/lib/com.qualcomm.qti.uceservice@2.1.so
+vendor/lib64/com.qualcomm.qti.uceservice@2.1.so
 
 # Keymaster
 vendor/lib/libkeymasterdeviceutils.so
@@ -988,6 +994,7 @@ vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
+vendor/lib64/libqtikeymaster4support.so
 -vendor/lib64/libskeymaster4device.so
 
 # Listen
@@ -1088,8 +1095,6 @@ vendor/lib64/vendor.qti.hardware.vpp@1.2.so|b663f9ef8df821bf6d2c3bd0d0c6fafd7baf
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so|bb68f5c369f585ae80297d8d6b5d7dfc45a67ae4
 
 # Neural-networks
-vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-qti
-vendor/etc/init/android.hardware.neuralnetworks@1.1-service-qti.rc
 vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti
 vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc
 vendor/lib64/libhexagon_nn_stub.so
@@ -1103,17 +1108,12 @@ vendor/lib64/nfc_nci_nxp.so
 vendor/lib64/vendor.nxp.nxpnfc@1.1.so
 
 # Power
-vendor/bin/hw/vendor.samsung.hardware.miscpower@1.0-service
-vendor/etc/init/vendor.samsung.hardware.miscpower@1.0-service.rc
 vendor/bin/hw/vendor.samsung.hardware.miscpower@2.0-service
 vendor/etc/init/vendor.samsung.hardware.miscpower@2.0-service.rc
 vendor/etc/powerhint.xml
-vendor/lib64/vendor.samsung.hardware.miscpower@1.0.so
 vendor/lib64/vendor.samsung.hardware.miscpower@2.0.so
 
 # Power - Perf
-vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
-vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc
 vendor/bin/hw/vendor.qti.hardware.perf@2.0-service
 vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc
 vendor/etc/lm/AppClassifierFeature.xml
@@ -1127,7 +1127,6 @@ vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-perfd.so
 vendor/lib/libqti-util.so
 vendor/lib/libqti-utils.so
-vendor/lib/vendor.qti.hardware.perf@1.0.so
 vendor/lib/vendor.qti.hardware.perf@2.0.so
 vendor/lib64/libadaptlaunch.so
 vendor/lib64/libappclassifier.so
@@ -1137,7 +1136,6 @@ vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/libqti-utils.so
-vendor/lib64/vendor.qti.hardware.perf@1.0.so
 vendor/lib64/vendor.qti.hardware.perf@2.0.so
 
 # Peripheral manager
@@ -1256,59 +1254,63 @@ vendor/lib64/vendor.samsung.hardware.radio.sechook@1.0.so
 vendor/lib64/libxml.so
 
 # Samsung - Misc
-vendor/bin/vendor.samsung.security.drk@1.0-service
 vendor/bin/vendor.samsung.security.sem@1.0-service
 vendor/bin/vendor.samsung.security.skpm@1.0-service
 vendor/bin/vendor.samsung.security.drk@2.0-service
 vendor/bin/vendor.samsung.security.sem@2.0-service
 vendor/bin/vendor.samsung.security.skpm@2.0-service
-vendor/etc/init/vendor.samsung.security.drk@1.0-service.rc
 vendor/etc/init/vendor.samsung.security.sem@1.0-service.rc
 vendor/etc/init/vendor.samsung.security.skpm@1.0-service.rc
 vendor/etc/init/vendor.samsung.security.drk@2.0-service.rc
 vendor/etc/init/vendor.samsung.security.sem@2.0-service.rc
 vendor/etc/init/vendor.samsung.security.skpm@2.0-service.rc
 vendor/lib/libsecnativefeature.so
-vendor/lib/vendor.samsung.security.drk@1.0_vendor.so
 vendor/lib/vendor.samsung.security.drk@2.0_vendor.so
 vendor/lib64/libsecnativefeature.so
-vendor/lib64/vendor.samsung.security.drk@1.0_vendor.so
 vendor/lib64/vendor.samsung.security.drk@2.0_vendor.so
 vendor/lib64/vendor.samsung.security.sem@1.0.so
 vendor/lib64/vendor.samsung.security.skpm@1.0.so
 
 # Samsung - Process Authenticator
-vendor/bin/vendor.samsung.security.proca@1.0-service
 vendor/bin/vendor.samsung.security.proca@2.0-service
 vendor/etc/init/pa_daemon_qsee.rc
 vendor/etc/process_authenticator/pa_config
 vendor/lib/libpadm.so
 vendor/lib/libpa.so
-vendor/lib/vendor.samsung.security.proca@1.0.so
 vendor/lib/vendor.samsung.security.proca@2.0.so
 vendor/lib64/libpadm.so
 vendor/lib64/libpa.so
-vendor/lib64/vendor.samsung.security.proca@1.0.so
 vendor/lib64/vendor.samsung.security.proca@2.0.so
 
 # Samsung - Secure Storage
 vendor/bin/secure_storage_daemon
 vendor/etc/init/secure_storage_daemon_qsee.rc
 vendor/lib/libsecure_storage.so
-vendor/lib/vendor.samsung.external.secure_storage@2.0.so
-vendor/lib/vendor.samsung.external.secure_storage@3.0.so
+vendor/lib/vendor.samsung.hardware.external.securestorage@3.0.so
 vendor/lib64/libsecure_storage.so
-vendor/lib64/vendor.samsung.external.secure_storage@2.0.so
-vendor/lib64/vendor.samsung.external.secure_storage@2.0.so
+vendor/lib64/vendor.samsung.hardware.external.securestorage@3.0.so
 
 # Samsung - VaultKeeper
 vendor/lib64/libsec_vaultkeeper_serverHal.so
-vendor/lib64/vendor.samsung.security.vaultkeeper_server@1.0.so
+vendor/lib64/vendor.samsung.security.vaultkeeper@1.0.so
+vendor/bin/vendor.samsung.security.vaultkeeper@1.0-service
 
 # Sensors
 vendor/bin/factory.ssc
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
+vendor/etc/sensors/config/ak991x_dri_0.json
+vendor/etc/sensors/config/sdmmagpie_ak991x_0.json
+vendor/etc/sensors/config/sdmmagpie_ak991x_mst_0.json
+vendor/etc/sensors/config/sdmmagpie_lsm6dsm_0.json
+vendor/etc/sensors/config/sdmmagpie_power_0.json
+vendor/etc/sensors/config/sdmmagpie_stk3x3x_0.json
+vendor/etc/sensors/config/sdmmagpie_stk3x3x_3.json
+vendor/etc/sensors/config/sdmmagpie_stk3x3x_4.json
+vendor/etc/sensors/config/sdmmagpie_stk3x3x_6.json
+vendor/etc/sensors/config/sdmmagpie_tcs3407_0.json
+vendor/etc/sensors/config/sdmmagpie_tcs3407_4.json
+vendor/etc/sensors/config/sdmmagpie_tcs3407_6.json
 vendor/etc/sensors/config/default_sensors.json
 vendor/etc/sensors/config/lsm6dsm_0.json
 vendor/etc/sensors/config/sns_amd.json
@@ -1412,6 +1414,7 @@ vendor/lib/vendor.qti.hardware.tui_comm@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # Voice
+vendor/lib/vendor.qti.voiceprint@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # USB
