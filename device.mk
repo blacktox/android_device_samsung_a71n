@@ -170,7 +170,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint feature
 PRODUCT_PACKAGES += \
-    vendor.samsung.hardware.biometrics.fingerprint@3.0-service.r1q \
+    vendor.samsung.hardware.biometrics.fingerprint@2.1-service.r1q \
     vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.r1q
 
 PRODUCT_COPY_FILES += \
