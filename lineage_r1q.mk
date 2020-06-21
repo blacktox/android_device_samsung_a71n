@@ -20,7 +20,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_NAME := lineage_r1q
 PRODUCT_DEVICE := r1q
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-A805
+PRODUCT_MODEL := SM-A805(F/DS)
 PRODUCT_MANUFACTURER := samsung
 
 # Device stuff, important needed stuff

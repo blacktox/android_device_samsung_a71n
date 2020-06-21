@@ -13,7 +13,6 @@ vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libcamera_nn_skel.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libdsp_streamer_skel.so
-vendor/lib/rfsa/adsp/libexternal_dog_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
 vendor/lib/rfsa/adsp/libhexagon_nn_skel_secondary.so
@@ -38,7 +37,6 @@ vendor/lib64/com.qualcomm.qti.ant@1.0.so
 # Audio
 etc/permissions/audiosphere.xml
 framework/audiosphere.jar|4450751aad4c268c686fe9bc93da595e14c009d9
-vendor/lib/libSamsungPostProcessConvertor.so
 vendor/lib/lib_SamsungRec_07001.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
 vendor/lib/lib_soundaliveresampler.so
@@ -54,7 +52,6 @@ vendor/lib/librecordalive.so
 vendor/lib/libsamsungVoipResampler.so
 vendor/lib/libsecaudioinfo.so
 vendor/lib/libsurround_3mic_proc.so
-vendor/lib/libtinycompress_vendor.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
@@ -65,42 +62,6 @@ vendor/lib64/libaudioparsers.so
 vendor/lib64/libqtigef.so
 
 # ACDB
-vendor/etc/audconf/ACR/Bluetooth_cal.acdb
-vendor/etc/audconf/ACR/Codec_cal.acdb
-vendor/etc/audconf/ACR/General_cal.acdb
-vendor/etc/audconf/ACR/Global_cal.acdb
-vendor/etc/audconf/ACR/Handset_cal.acdb
-vendor/etc/audconf/ACR/Hdmi_cal.acdb
-vendor/etc/audconf/ACR/Headset_cal.acdb
-vendor/etc/audconf/ACR/Speaker_cal.acdb
-vendor/etc/audconf/ACR/workspaceFile.qwsp
-vendor/etc/audconf/AFG/Bluetooth_cal.acdb
-vendor/etc/audconf/AFG/Codec_cal.acdb
-vendor/etc/audconf/AFG/General_cal.acdb
-vendor/etc/audconf/AFG/Global_cal.acdb
-vendor/etc/audconf/AFG/Handset_cal.acdb
-vendor/etc/audconf/AFG/Hdmi_cal.acdb
-vendor/etc/audconf/AFG/Headset_cal.acdb
-vendor/etc/audconf/AFG/Speaker_cal.acdb
-vendor/etc/audconf/AFG/workspaceFile.qwsp
-vendor/etc/audconf/AFR/Bluetooth_cal.acdb
-vendor/etc/audconf/AFR/Codec_cal.acdb
-vendor/etc/audconf/AFR/General_cal.acdb
-vendor/etc/audconf/AFR/Global_cal.acdb
-vendor/etc/audconf/AFR/Handset_cal.acdb
-vendor/etc/audconf/AFR/Hdmi_cal.acdb
-vendor/etc/audconf/AFR/Headset_cal.acdb
-vendor/etc/audconf/AFR/Speaker_cal.acdb
-vendor/etc/audconf/AFR/workspaceFile.qwsp
-vendor/etc/audconf/BTC/Bluetooth_cal.acdb
-vendor/etc/audconf/BTC/Codec_cal.acdb
-vendor/etc/audconf/BTC/General_cal.acdb
-vendor/etc/audconf/BTC/Global_cal.acdb
-vendor/etc/audconf/BTC/Handset_cal.acdb
-vendor/etc/audconf/BTC/Hdmi_cal.acdb
-vendor/etc/audconf/BTC/Headset_cal.acdb
-vendor/etc/audconf/BTC/Speaker_cal.acdb
-vendor/etc/audconf/BTC/workspaceFile.qwsp
 vendor/etc/audconf/BNG/Bluetooth_cal.acdb
 vendor/etc/audconf/BNG/Codec_cal.acdb
 vendor/etc/audconf/BNG/General_cal.acdb
@@ -110,69 +71,6 @@ vendor/etc/audconf/BNG/Hdmi_cal.acdb
 vendor/etc/audconf/BNG/Headset_cal.acdb
 vendor/etc/audconf/BNG/Speaker_cal.acdb
 vendor/etc/audconf/BNG/workspaceFile.qwsp
-vendor/etc/audconf/CAC/Bluetooth_cal.acdb
-vendor/etc/audconf/CAC/Codec_cal.acdb
-vendor/etc/audconf/CAC/General_cal.acdb
-vendor/etc/audconf/CAC/Global_cal.acdb
-vendor/etc/audconf/CAC/Handset_cal.acdb
-vendor/etc/audconf/CAC/Hdmi_cal.acdb
-vendor/etc/audconf/CAC/Headset_cal.acdb
-vendor/etc/audconf/CAC/Speaker_cal.acdb
-vendor/etc/audconf/CAC/workspaceFile.qwsp
-vendor/etc/audconf/CAU/Bluetooth_cal.acdb
-vendor/etc/audconf/CAU/Codec_cal.acdb
-vendor/etc/audconf/CAU/General_cal.acdb
-vendor/etc/audconf/CAU/Global_cal.acdb
-vendor/etc/audconf/CAU/Handset_cal.acdb
-vendor/etc/audconf/CAU/Hdmi_cal.acdb
-vendor/etc/audconf/CAU/Headset_cal.acdb
-vendor/etc/audconf/CAU/Speaker_cal.acdb
-vendor/etc/audconf/CAU/workspaceFile.qwsp
-vendor/etc/audconf/CPW/Bluetooth_cal.acdb
-vendor/etc/audconf/CPW/Codec_cal.acdb
-vendor/etc/audconf/CPW/General_cal.acdb
-vendor/etc/audconf/CPW/Global_cal.acdb
-vendor/etc/audconf/CPW/Handset_cal.acdb
-vendor/etc/audconf/CPW/Hdmi_cal.acdb
-vendor/etc/audconf/CPW/Headset_cal.acdb
-vendor/etc/audconf/CPW/Speaker_cal.acdb
-vendor/etc/audconf/CPW/workspaceFile.qwsp
-vendor/etc/audconf/DKR/Bluetooth_cal.acdb
-vendor/etc/audconf/DKR/Codec_cal.acdb
-vendor/etc/audconf/DKR/General_cal.acdb
-vendor/etc/audconf/DKR/Global_cal.acdb
-vendor/etc/audconf/DKR/Handset_cal.acdb
-vendor/etc/audconf/DKR/Hdmi_cal.acdb
-vendor/etc/audconf/DKR/Headset_cal.acdb
-vendor/etc/audconf/DKR/Speaker_cal.acdb
-vendor/etc/audconf/DKR/workspaceFile.qwsp
-vendor/etc/audconf/ECT/Bluetooth_cal.acdb
-vendor/etc/audconf/ECT/Codec_cal.acdb
-vendor/etc/audconf/ECT/General_cal.acdb
-vendor/etc/audconf/ECT/Global_cal.acdb
-vendor/etc/audconf/ECT/Handset_cal.acdb
-vendor/etc/audconf/ECT/Hdmi_cal.acdb
-vendor/etc/audconf/ECT/Headset_cal.acdb
-vendor/etc/audconf/ECT/Speaker_cal.acdb
-vendor/etc/audconf/ECT/workspaceFile.qwsp
-vendor/etc/audconf/EGY/Bluetooth_cal.acdb
-vendor/etc/audconf/EGY/Codec_cal.acdb
-vendor/etc/audconf/EGY/General_cal.acdb
-vendor/etc/audconf/EGY/Global_cal.acdb
-vendor/etc/audconf/EGY/Handset_cal.acdb
-vendor/etc/audconf/EGY/Hdmi_cal.acdb
-vendor/etc/audconf/EGY/Headset_cal.acdb
-vendor/etc/audconf/EGY/Speaker_cal.acdb
-vendor/etc/audconf/EGY/workspaceFile.qwsp
-vendor/etc/audconf/ILO/Bluetooth_cal.acdb
-vendor/etc/audconf/ILO/Codec_cal.acdb
-vendor/etc/audconf/ILO/General_cal.acdb
-vendor/etc/audconf/ILO/Global_cal.acdb
-vendor/etc/audconf/ILO/Handset_cal.acdb
-vendor/etc/audconf/ILO/Hdmi_cal.acdb
-vendor/etc/audconf/ILO/Headset_cal.acdb
-vendor/etc/audconf/ILO/Speaker_cal.acdb
-vendor/etc/audconf/ILO/workspaceFile.qwsp
 vendor/etc/audconf/INS/Bluetooth_cal.acdb
 vendor/etc/audconf/INS/Codec_cal.acdb
 vendor/etc/audconf/INS/General_cal.acdb
@@ -182,24 +80,6 @@ vendor/etc/audconf/INS/Hdmi_cal.acdb
 vendor/etc/audconf/INS/Headset_cal.acdb
 vendor/etc/audconf/INS/Speaker_cal.acdb
 vendor/etc/audconf/INS/workspaceFile.qwsp
-vendor/etc/audconf/KSA/Bluetooth_cal.acdb
-vendor/etc/audconf/KSA/Codec_cal.acdb
-vendor/etc/audconf/KSA/General_cal.acdb
-vendor/etc/audconf/KSA/Global_cal.acdb
-vendor/etc/audconf/KSA/Handset_cal.acdb
-vendor/etc/audconf/KSA/Hdmi_cal.acdb
-vendor/etc/audconf/KSA/Headset_cal.acdb
-vendor/etc/audconf/KSA/Speaker_cal.acdb
-vendor/etc/audconf/KSA/workspaceFile.qwsp
-vendor/etc/audconf/LYS/Bluetooth_cal.acdb
-vendor/etc/audconf/LYS/Codec_cal.acdb
-vendor/etc/audconf/LYS/General_cal.acdb
-vendor/etc/audconf/LYS/Global_cal.acdb
-vendor/etc/audconf/LYS/Handset_cal.acdb
-vendor/etc/audconf/LYS/Hdmi_cal.acdb
-vendor/etc/audconf/LYS/Headset_cal.acdb
-vendor/etc/audconf/LYS/Speaker_cal.acdb
-vendor/etc/audconf/LYS/workspaceFile.qwsp
 vendor/etc/audconf/NPB/Bluetooth_cal.acdb
 vendor/etc/audconf/NPB/Codec_cal.acdb
 vendor/etc/audconf/NPB/General_cal.acdb
@@ -209,15 +89,15 @@ vendor/etc/audconf/NPB/Hdmi_cal.acdb
 vendor/etc/audconf/NPB/Headset_cal.acdb
 vendor/etc/audconf/NPB/Speaker_cal.acdb
 vendor/etc/audconf/NPB/workspaceFile.qwsp
-vendor/etc/audconf/SKZ/Bluetooth_cal.acdb
-vendor/etc/audconf/SKZ/Codec_cal.acdb
-vendor/etc/audconf/SKZ/General_cal.acdb
-vendor/etc/audconf/SKZ/Global_cal.acdb
-vendor/etc/audconf/SKZ/Handset_cal.acdb
-vendor/etc/audconf/SKZ/Hdmi_cal.acdb
-vendor/etc/audconf/SKZ/Headset_cal.acdb
-vendor/etc/audconf/SKZ/Speaker_cal.acdb
-vendor/etc/audconf/SKZ/workspaceFile.qwsp
+vendor/etc/audconf/NPL/Bluetooth_cal.acdb
+vendor/etc/audconf/NPL/Codec_cal.acdb
+vendor/etc/audconf/NPL/General_cal.acdb
+vendor/etc/audconf/NPL/Global_cal.acdb
+vendor/etc/audconf/NPL/Handset_cal.acdb
+vendor/etc/audconf/NPL/Hdmi_cal.acdb
+vendor/etc/audconf/NPL/Headset_cal.acdb
+vendor/etc/audconf/NPL/Speaker_cal.acdb
+vendor/etc/audconf/NPL/workspaceFile.qwsp
 vendor/etc/audconf/SLK/Bluetooth_cal.acdb
 vendor/etc/audconf/SLK/Codec_cal.acdb
 vendor/etc/audconf/SLK/General_cal.acdb
@@ -227,15 +107,6 @@ vendor/etc/audconf/SLK/Hdmi_cal.acdb
 vendor/etc/audconf/SLK/Headset_cal.acdb
 vendor/etc/audconf/SLK/Speaker_cal.acdb
 vendor/etc/audconf/SLK/workspaceFile.qwsp
-vendor/etc/audconf/MID/Bluetooth_cal.acdb
-vendor/etc/audconf/MID/Codec_cal.acdb
-vendor/etc/audconf/MID/General_cal.acdb
-vendor/etc/audconf/MID/Global_cal.acdb
-vendor/etc/audconf/MID/Handset_cal.acdb
-vendor/etc/audconf/MID/Hdmi_cal.acdb
-vendor/etc/audconf/MID/Headset_cal.acdb
-vendor/etc/audconf/MID/Speaker_cal.acdb
-vendor/etc/audconf/MID/workspaceFile.qwsp
 vendor/etc/audconf/OPEN/Bluetooth_cal.acdb
 vendor/etc/audconf/OPEN/Codec_cal.acdb
 vendor/etc/audconf/OPEN/General_cal.acdb
@@ -245,123 +116,15 @@ vendor/etc/audconf/OPEN/Hdmi_cal.acdb
 vendor/etc/audconf/OPEN/Headset_cal.acdb
 vendor/etc/audconf/OPEN/Speaker_cal.acdb
 vendor/etc/audconf/OPEN/workspaceFile.qwsp
-vendor/etc/audconf/PAK/Bluetooth_cal.acdb
-vendor/etc/audconf/PAK/Codec_cal.acdb
-vendor/etc/audconf/PAK/General_cal.acdb
-vendor/etc/audconf/PAK/Global_cal.acdb
-vendor/etc/audconf/PAK/Handset_cal.acdb
-vendor/etc/audconf/PAK/Hdmi_cal.acdb
-vendor/etc/audconf/PAK/Headset_cal.acdb
-vendor/etc/audconf/PAK/Speaker_cal.acdb
-vendor/etc/audconf/PAK/workspaceFile.qwsp
-vendor/etc/audconf/SEK/Bluetooth_cal.acdb
-vendor/etc/audconf/SEK/Codec_cal.acdb
-vendor/etc/audconf/SEK/General_cal.acdb
-vendor/etc/audconf/SEK/Global_cal.acdb
-vendor/etc/audconf/SEK/Handset_cal.acdb
-vendor/etc/audconf/SEK/Hdmi_cal.acdb
-vendor/etc/audconf/SEK/Headset_cal.acdb
-vendor/etc/audconf/SEK/Speaker_cal.acdb
-vendor/etc/audconf/SEK/workspaceFile.qwsp
-vendor/etc/audconf/SER/Bluetooth_cal.acdb
-vendor/etc/audconf/SER/Codec_cal.acdb
-vendor/etc/audconf/SER/General_cal.acdb
-vendor/etc/audconf/SER/Global_cal.acdb
-vendor/etc/audconf/SER/Handset_cal.acdb
-vendor/etc/audconf/SER/Hdmi_cal.acdb
-vendor/etc/audconf/SER/Headset_cal.acdb
-vendor/etc/audconf/SER/Speaker_cal.acdb
-vendor/etc/audconf/SER/workspaceFile.qwsp
-vendor/etc/audconf/SKZ/Bluetooth_cal.acdb
-vendor/etc/audconf/SKZ/Codec_cal.acdb
-vendor/etc/audconf/SKZ/General_cal.acdb
-vendor/etc/audconf/SKZ/Global_cal.acdb
-vendor/etc/audconf/SKZ/Handset_cal.acdb
-vendor/etc/audconf/SKZ/Hdmi_cal.acdb
-vendor/etc/audconf/SKZ/Headset_cal.acdb
-vendor/etc/audconf/SKZ/Speaker_cal.acdb
-vendor/etc/audconf/SKZ/workspaceFile.qwsp
-vendor/etc/audconf/THR/Bluetooth_cal.acdb
-vendor/etc/audconf/THR/Codec_cal.acdb
-vendor/etc/audconf/THR/General_cal.acdb
-vendor/etc/audconf/THR/Global_cal.acdb
-vendor/etc/audconf/THR/Handset_cal.acdb
-vendor/etc/audconf/THR/Hdmi_cal.acdb
-vendor/etc/audconf/THR/Headset_cal.acdb
-vendor/etc/audconf/THR/Speaker_cal.acdb
-vendor/etc/audconf/THR/workspaceFile.qwsp
-vendor/etc/audconf/TKD/Bluetooth_cal.acdb
-vendor/etc/audconf/TKD/Codec_cal.acdb
-vendor/etc/audconf/TKD/General_cal.acdb
-vendor/etc/audconf/TKD/Global_cal.acdb
-vendor/etc/audconf/TKD/Handset_cal.acdb
-vendor/etc/audconf/TKD/Hdmi_cal.acdb
-vendor/etc/audconf/TKD/Headset_cal.acdb
-vendor/etc/audconf/TKD/Speaker_cal.acdb
-vendor/etc/audconf/TKD/workspaceFile.qwsp
-vendor/etc/audconf/TUN/Bluetooth_cal.acdb
-vendor/etc/audconf/TUN/Codec_cal.acdb
-vendor/etc/audconf/TUN/General_cal.acdb
-vendor/etc/audconf/TUN/Global_cal.acdb
-vendor/etc/audconf/TUN/Handset_cal.acdb
-vendor/etc/audconf/TUN/Hdmi_cal.acdb
-vendor/etc/audconf/TUN/Headset_cal.acdb
-vendor/etc/audconf/TUN/Speaker_cal.acdb
-vendor/etc/audconf/TUN/workspaceFile.qwsp
-vendor/etc/audconf/TUR/Bluetooth_cal.acdb
-vendor/etc/audconf/TUR/Codec_cal.acdb
-vendor/etc/audconf/TUR/General_cal.acdb
-vendor/etc/audconf/TUR/Global_cal.acdb
-vendor/etc/audconf/TUR/Handset_cal.acdb
-vendor/etc/audconf/TUR/Hdmi_cal.acdb
-vendor/etc/audconf/TUR/Headset_cal.acdb
-vendor/etc/audconf/TUR/Speaker_cal.acdb
-vendor/etc/audconf/TUR/workspaceFile.qwsp
-vendor/etc/audconf/XFA/Bluetooth_cal.acdb
-vendor/etc/audconf/XFA/Codec_cal.acdb
-vendor/etc/audconf/XFA/General_cal.acdb
-vendor/etc/audconf/XFA/Global_cal.acdb
-vendor/etc/audconf/XFA/Handset_cal.acdb
-vendor/etc/audconf/XFA/Hdmi_cal.acdb
-vendor/etc/audconf/XFA/Headset_cal.acdb
-vendor/etc/audconf/XFA/Speaker_cal.acdb
-vendor/etc/audconf/XFA/workspaceFile.qwsp
-vendor/etc/audconf/XFE/Bluetooth_cal.acdb
-vendor/etc/audconf/XFE/Codec_cal.acdb
-vendor/etc/audconf/XFE/General_cal.acdb
-vendor/etc/audconf/XFE/Global_cal.acdb
-vendor/etc/audconf/XFE/Handset_cal.acdb
-vendor/etc/audconf/XFE/Hdmi_cal.acdb
-vendor/etc/audconf/XFE/Headset_cal.acdb
-vendor/etc/audconf/XFE/Speaker_cal.acdb
-vendor/etc/audconf/XFE/workspaceFile.qwsp
-vendor/etc/audconf/XFV/Bluetooth_cal.acdb
-vendor/etc/audconf/XFV/Codec_cal.acdb
-vendor/etc/audconf/XFV/General_cal.acdb
-vendor/etc/audconf/XFV/Global_cal.acdb
-vendor/etc/audconf/XFV/Handset_cal.acdb
-vendor/etc/audconf/XFV/Hdmi_cal.acdb
-vendor/etc/audconf/XFV/Headset_cal.acdb
-vendor/etc/audconf/XFV/Speaker_cal.acdb
-vendor/etc/audconf/XFV/workspaceFile.qwsp
-vendor/etc/audconf/XSG/Bluetooth_cal.acdb
-vendor/etc/audconf/XSG/Codec_cal.acdb
-vendor/etc/audconf/XSG/General_cal.acdb
-vendor/etc/audconf/XSG/Global_cal.acdb
-vendor/etc/audconf/XSG/Handset_cal.acdb
-vendor/etc/audconf/XSG/Hdmi_cal.acdb
-vendor/etc/audconf/XSG/Headset_cal.acdb
-vendor/etc/audconf/XSG/Speaker_cal.acdb
-vendor/etc/audconf/XSG/workspaceFile.qwsp
-vendor/etc/audconf/OCG/Bluetooth_cal.acdb
-vendor/etc/audconf/OCG/Codec_cal.acdb
-vendor/etc/audconf/OCG/General_cal.acdb
-vendor/etc/audconf/OCG/Global_cal.acdb
-vendor/etc/audconf/OCG/Handset_cal.acdb
-vendor/etc/audconf/OCG/Hdmi_cal.acdb
-vendor/etc/audconf/OCG/Headset_cal.acdb
-vendor/etc/audconf/OCG/Speaker_cal.acdb
-vendor/etc/audconf/OCG/workspaceFile.qwsp
+vendor/etc/audconf/OGC/Bluetooth_cal.acdb
+vendor/etc/audconf/OGC/Codec_cal.acdb
+vendor/etc/audconf/OGC/General_cal.acdb
+vendor/etc/audconf/OGC/Global_cal.acdb
+vendor/etc/audconf/OGC/Handset_cal.acdb
+vendor/etc/audconf/OGC/Hdmi_cal.acdb
+vendor/etc/audconf/OGC/Headset_cal.acdb
+vendor/etc/audconf/OGC/Speaker_cal.acdb
+vendor/etc/audconf/OGC/workspaceFile.qwsp
 
 # Audio - Effects
 vendor/lib/soundfx/libasphere.so
@@ -372,17 +135,13 @@ vendor/lib64/soundfx/libasphere.so
 
 # Bluetooth
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-vendor/bin/hci_qcomm_init
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/firmware/apbtfw11.tlv
 vendor/firmware/apnv11.bin
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib/com.qualcomm.qti.bluetooth_audio@1.0.so
-vendor/lib/vendor.samsung.hardware.bluetooth@1.0.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/libbtnv.so
-vendor/lib64/vendor.samsung.hardware.bluetooth@1.0.so
 
 # Camera
 lib/libchromaflash.so
@@ -394,25 +153,11 @@ vendor/lib/camera.device@3.2-impl.so
 vendor/lib/camera.device@3.3-impl.so
 vendor/lib/camera.device@3.4-impl.so
 vendor/lib/camera.device@3.5-impl.so
-vendor/lib/camera/com.samsung.sensor.gc5035.so
 vendor/lib/camera/com.samsung.sensor.s5k4ha.so
-vendor/lib/camera/com.samsung.sensor.s5kgd1.so
-vendor/lib/camera/com.samsung.sensor.s5kgd1_front.so
 vendor/lib/camera/com.samsung.sensor.imx316.so
 vendor/lib/camera/com.samsung.sensor.imx316_front.so
 vendor/lib/camera/com.samsung.sensor.imx586.so
 vendor/lib/camera/com.samsung.sensor.imx586_front.so
-vendor/lib/camera/com.samsung.sensormodule.0_lsi_s5kgd1_dv.bin
-vendor/lib/camera/com.samsung.sensormodule.0_lsi_s5kgd1_pv_NEW.bin
-vendor/lib/camera/com.samsung.sensormodule.0_lsi_s5kgd1_pv_OLD.bin
-vendor/lib/camera/com.samsung.sensormodule.1_lsi_s5kgd1_front_dv.bin
-vendor/lib/camera/com.samsung.sensormodule.1_lsi_s5kgd1_front_pv_NEW.bin
-vendor/lib/camera/com.samsung.sensormodule.1_lsi_s5kgd1_front_pv_OLD.bin
-vendor/lib/camera/com.samsung.sensormodule.2_lsi_s5k4ha.bin
-vendor/lib/camera/com.samsung.sensormodule.3_lsi_gc5035.bin
-vendor/lib/camera/com.samsung.sensormodule.8_lsi_s5kgd1_front_full_dv.bin
-vendor/lib/camera/com.samsung.sensormodule.8_lsi_s5kgd1_front_full_pv_NEW.bin
-vendor/lib/camera/com.samsung.sensormodule.8_lsi_s5kgd1_front_full_pv_OLD.bin
 vendor/lib/camera/com.samsung.sensormodule.0_sony_imx586_rear_dv.bin
 vendor/lib/camera/com.samsung.sensormodule.0_sony_imx586_rear_pv.bin
 vendor/lib/camera/com.samsung.sensormodule.1_sony_imx586_front_dv.bin
@@ -425,10 +170,6 @@ vendor/lib/camera/com.samsung.sensormodule.6_sony_imx316.bin
 vendor/lib/camera/com.samsung.sensormodule.7_sony_imx316_front.bin
 vendor/lib/camera/com.samsung.sensormodule.8_sony_imx586_front_full_dv.bin
 vendor/lib/camera/com.samsung.sensormodule.8_sony_imx586_front_full_pv.bin
-vendor/lib/camera/com.samsung.tuned.gc5035.bin
-vendor/lib/camera/com.samsung.tuned.s5k4ha.bin
-vendor/lib/camera/com.samsung.tuned.s5kgd1.bin
-vendor/lib/camera/com.samsung.tuned.s5kgd1_front.bin
 vendor/lib/camera/com.samsung.tuned.lsi_s5k4ha_front.bin
 vendor/lib/camera/com.samsung.tuned.lsi_s5k4ha.bin
 vendor/lib/camera/com.samsung.tuned.sony_imx316.bin
@@ -484,10 +225,7 @@ vendor/lib/camera/uw_dual_calibration.bin
 vendor/lib/camera/w_dual_calibration.bin
 vendor/lib/hw/camera.qcom.so
 vendor/lib/hw/com.samsung.chi.override.so
-vendor/lib/vendor.samsung.hardware.camera.provider@1.0-impl.so
-vendor/lib/vendor.samsung.hardware.camera.provider@4.0-impl.so
-vendor/lib/hw/vendor.samsung.hardware.camera.provider@1.0-impl.so
-vendor/lib/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so
+vendor/lib/hw/vendor.samsung.hardware.camera.provider@3.0-impl.so
 vendor/lib/libSNPE.so
 vendor/lib/libc++_shared.so
 vendor/lib/libcamera_nn_stub.so
@@ -510,71 +248,25 @@ vendor/lib/libsns_device_mode_stub.so
 vendor/lib/libsns_fastRPC_util.so
 vendor/lib/libsns_low_lat_stream_stub.so
 vendor/lib/libsnsapi.so
-vendor/lib/libsnsdiaglog.so
 vendor/lib/libswregistrationalgo.so
 vendor/lib/libswvdec.so
-vendor/lib/libsymphony-cpu.so
-vendor/lib/libsymphonypower.so
 vendor/lib/libuniplugin.so
 vendor/lib/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib/vendor.samsung.camera.device@1.0-impl.so
-vendor/lib/vendor.samsung.camera.device@3.2-impl.so
-vendor/lib/vendor.samsung.camera.device@3.3-impl.so
-vendor/lib/vendor.samsung.camera.device@3.4-impl.so
-vendor/lib/vendor.samsung.camera.device@3.5-impl.so
 vendor/lib/vendor.samsung.hardware.camera.device@1.0.so
-vendor/lib/vendor.samsung.hardware.camera.device@3.2.so
-vendor/lib/vendor.samsung.hardware.camera.device@3.3.so
-vendor/lib/vendor.samsung.hardware.camera.device@3.4.so
-vendor/lib/vendor.samsung.hardware.camera.provider@2.4.so
+vendor/lib/vendor.samsung.hardware.camera.device@4.0.so
 vendor/lib/vendor.samsung.hardware.camera.provider@3.0.so
-vendor/lib/vendor.samsung.hardware.camera.provider@4.0.so
 vendor/lib64/camera.device@1.0-impl.so
 vendor/lib64/camera.device@3.2-impl.so
 vendor/lib64/camera.device@3.3-impl.so
 vendor/lib64/camera.device@3.4-impl.so
 vendor/lib64/camera.device@3.5-impl.so
-vendor/lib64/camera/com.samsung.sensor.gc5035.so
 vendor/lib64/camera/com.samsung.sensor.s5k4ha.so
 vendor/lib64/camera/com.samsung.sensor.s5k4ha_front.so
-vendor/lib64/camera/com.samsung.sensor.s5kgd1.so
 vendor/lib64/camera/com.samsung.sensor.imx316.so
 vendor/lib64/camera/com.samsung.sensor.imx316_front.so
 vendor/lib64/camera/com.samsung.sensor.imx586.so
 vendor/lib64/camera/com.samsung.sensor.imx586_front.so
-vendor/lib64/camera/com.samsung.sensormodule.0_lsi_s5kgd1_dv.bin
-vendor/lib64/camera/com.samsung.sensormodule.0_lsi_s5kgd1_pv_NEW.bin
-vendor/lib64/camera/com.samsung.sensormodule.0_lsi_s5kgd1_pv_OLD.bin
-vendor/lib64/camera/com.samsung.sensormodule.1_lsi_s5kgd1_front_dv.bin
-vendor/lib64/camera/com.samsung.sensormodule.1_lsi_s5kgd1_front_pv_NEW.bin
-vendor/lib64/camera/com.samsung.sensormodule.1_lsi_s5kgd1_front_pv_OLD.bin
-vendor/lib64/camera/com.samsung.sensormodule.2_lsi_s5k4ha.bin
-vendor/lib64/camera/com.samsung.sensormodule.3_lsi_gc5035.bin
-vendor/lib64/camera/com.samsung.sensormodule.8_lsi_s5kgd1_front_full_dv.bin
-vendor/lib64/camera/com.samsung.sensormodule.8_lsi_s5kgd1_front_full_pv_NEW.bin
-vendor/lib64/camera/com.samsung.sensormodule.8_lsi_s5kgd1_front_full_pv_OLD.bin
-vendor/lib64/camera/com.samsung.sensormodule.0_sony_imx586_rear_dv.bin
-vendor/lib64/camera/com.samsung.sensormodule.0_sony_imx586_rear_pv.bin
-vendor/lib64/camera/com.samsung.sensormodule.1_sony_imx586_front_dv.bin
-vendor/lib64/camera/com.samsung.sensormodule.1_sony_imx586_front_pv.bin
-vendor/lib64/camera/com.samsung.sensormodule.2_lsi_s5k4ha_dv.bin
-vendor/lib64/camera/com.samsung.sensormodule.2_lsi_s5k4ha_dv.bin
-vendor/lib64/camera/com.samsung.sensormodule.4_lsi_s5k4ha_front_dv.bin
-vendor/lib64/camera/com.samsung.sensormodule.4_lsi_s5k4ha_front_pv.bin
-vendor/lib64/camera/com.samsung.sensormodule.6_sony_imx316.bin
-vendor/lib64/camera/com.samsung.sensormodule.7_sony_imx316_front.bin
-vendor/lib64/camera/com.samsung.sensormodule.8_sony_imx586_front_full_dv.bin
-vendor/lib64/camera/com.samsung.sensormodule.8_sony_imx586_front_full_pv.bin
-vendor/lib64/camera/com.samsung.tuned.gc5035.bin
-vendor/lib64/camera/com.samsung.tuned.s5k4ha.bin
-vendor/lib64/camera/com.samsung.tuned.s5kgd1.bin
-vendor/lib64/camera/com.samsung.tuned.s5kgd1_front.bin
-vendor/lib64/camera/com.samsung.tuned.lsi_s5k4ha_front.bin
-vendor/lib64/camera/com.samsung.tuned.lsi_s5k4ha.bin
-vendor/lib64/camera/com.samsung.tuned.sony_imx316.bin
-vendor/lib64/camera/com.samsung.tuned.sony_imx316_front.bin
-vendor/lib64/camera/com.samsung.tuned.sony_imx586.bin
-vendor/lib64/camera/com.samsung.tuned.sony_imx586_front.bin
 vendor/lib64/camera/components/com.qti.camx.chiiqutils.so
 vendor/lib64/camera/components/com.qti.eisv2.so
 vendor/lib64/camera/components/com.qti.eisv3.so
@@ -613,10 +305,7 @@ vendor/lib64/camera/components/libdepthmapwrapper.so
 vendor/lib64/camera/components/libmmcamera_cac3.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.samsung.chi.override.so
-vendor/lib64/vendor.samsung.hardware.camera.provider@1.0-impl.so
-vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-impl.so
-vendor/lib64/hw/vendor.samsung.hardware.camera.provider@1.0-impl.so
-vendor/lib64/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so
+vendor/lib64/hw/vendor.samsung.hardware.camera.provider@3.0-impl.so
 vendor/lib64/libSNPE.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libcamera_nn_stub.so
@@ -639,27 +328,16 @@ vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/libsnsapi.so
-vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libswvdec.so
 vendor/lib64/libsymphony-cpu.so
-vendor/lib64/libsymphonypower.so
 vendor/lib64/libuniplugin.so
 vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib64/vendor.samsung.camera.device@1.0-impl.so
-vendor/lib64/vendor.samsung.camera.device@3.2-impl.so
-vendor/lib64/vendor.samsung.camera.device@3.3-impl.so
-vendor/lib64/vendor.samsung.camera.device@3.4-impl.so
-vendor/lib64/vendor.samsung.camera.device@3.5-impl.so
+vendor/lib64/vendor.samsung.camera.device@4.0-impl.so
 vendor/lib64/vendor.samsung.hardware.camera.device@1.0.so
-vendor/lib64/vendor.samsung.hardware.camera.device@3.2.so
-vendor/lib64/vendor.samsung.hardware.camera.device@3.3.so
-vendor/lib64/vendor.samsung.hardware.camera.device@3.4.so
-vendor/lib64/vendor.samsung.hardware.camera.device@3.5.so
 vendor/lib64/vendor.samsung.hardware.camera.device@4.0.so
-vendor/lib64/vendor.samsung.hardware.camera.provider@2.4.so
 vendor/lib64/vendor.samsung.hardware.camera.provider@3.0.so
-vendor/lib64/vendor.samsung.hardware.camera.provider@4.0.so
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.elf
@@ -677,11 +355,9 @@ vendor/bin/hvdcp_opti
 
 # Device Health
 vendor/bin/hw/android.hardware.health@2.0-service.samsung
-vendor/bin/seemp_healthd
 vendor/etc/init/android.hardware.health@2.0-service.samsung.rc
 vendor/lib/libsystem_health_mon.so
 vendor/lib64/libsystem_health_mon.so
-vendor/lib64/vendor.samsung.hardware.exthealth@1.0.so
 
 # Firmware
 vendor/firmware/Data.msc
@@ -692,11 +368,7 @@ vendor/firmware/leia_pm4_470.fw
 vendor/firmware/ipa_fws.elf
 
 # Display
-vendor/bin/hw/vendor.qti.hardware.display.allocator@1.0-service|230a26db686f817fd17579064899fd35431fee17
-vendor/bin/hw/vendor.qti.hardware.display.allocator@2.0-service
 vendor/bin/hw/vendor.qti.hardware.display.allocator-service
-vendor/bin/hw/vendor.qti.hardware.display.allocator@3.0-service
-vendor/etc/init/vendor.qti.hardware.display.allocator@1.0-service.rc|110424738e85ab9600ba2e389d162978d7bb950c
 vendor/etc/init/vendor.qti.hardware.display.allocator-service.rc
 vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl-qti-display.so|ca26c68f3d9fdd52e0be63274515ecbc44c9a0e7
 vendor/lib/hw/android.hardware.graphics.mapper@2.0-impl-qti-display.so
@@ -762,13 +434,11 @@ vendor/lib64/libsdm-colormgr-algo.so
 # DRM
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libcpion.so
-vendor/lib/libcppf.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libtzdrmgenprov.so
 vendor/lib64/libcpion.so
-vendor/lib64/libcppf.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/liboemcrypto.so
@@ -791,9 +461,6 @@ vendor/lib/libwvhidl.so
 
 # DRM - Widevine key provisioning
 vendor/bin/wvkprov
-vendor/bin/vendor.samsung.security.wvkprov_server@1.0-service
-vendor/etc/init/vendor.samsung.security.wvkprov_server@1.0-service.rc
-vendor/lib64/vendor.samsung.security.wvkprov_server@1.0.so
 
 # Fingerprint
 vendor/lib64/libbauthserver.so
@@ -806,18 +473,13 @@ vendor/lib64/libsynaFpSensorTestNwd.so
 # FM
 lib/fm_helium.so
 lib/libfm-hci.so
--lib/vendor.qti.hardware.fm@1.0.so
 lib64/fm_helium.so
 lib64/libfm-hci.so
--lib64/vendor.qti.hardware.fm@1.0.so
 vendor/lib/ftm_fm_lib.so
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib/vendor.qti.hardware.fm@1.0.so
-vendor/lib/vendor.qti.hardware.fm@1.0_vendor.so
 vendor/lib64/ftm_fm_lib.so
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
-vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
 
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.mdfpp.so
@@ -877,11 +539,9 @@ vendor/lib/hw/vulkan.sm6150.so|fc62d26b4fa0234308a6fc6745e7903bae834b59
 vendor/lib64/hw/vulkan.sm6150.so|30b53d5bca63292898528ff5c796546d4fc3f9fa
 
 # GPS
-vendor/bin/hw/vendor.qti.gnss@2.0-service-qti
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
 vendor/bin/xtra-daemon
-vendor/etc/init/vendor.qti.gnss@2.0-service-qti.rc
 vendor/etc/cacert_location.pem
 vendor/etc/xtra_root_cert.pem
 vendor/lib/hw/android.hardware.gnss@2.0-impl-qti.so
@@ -889,9 +549,7 @@ vendor/lib/hw/vendor.qti.gnss@3.0-impl.so
 vendor/lib/hw/vendor.samsung.hardware.gnss@2.0-impl-sec.so
 vendor/lib/libdataitems.so
 vendor/lib/libfloatingfeature.so
-vendor/lib/libflp.so
 vendor/lib/libgarden.so
-vendor/lib/libgeofence.so
 vendor/lib/libgnsspps.so
 vendor/lib/libgnss.so
 vendor/lib/libgps.utils.so
@@ -918,9 +576,7 @@ vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so
 vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl-sec.so
 vendor/lib64/libdataitems.so
 vendor/lib64/libfloatingfeature.so
-vendor/lib64/libflp.so
 vendor/lib64/libgarden.so
-vendor/lib64/libgeofence.so
 vendor/lib64/libgnsspps.so
 vendor/lib64/libgnss.so
 vendor/lib64/libgps.utils.so
@@ -962,16 +618,16 @@ vendor/saiv/image_understanding/db/aig_classifier/aig_classifier_cnn_light.caffe
 vendor/saiv/image_understanding/db/aig_classifier/aig_classifier_cnn.prototxt
 vendor/saiv/image_understanding/db/aig_detector/aig_detector_cnn_light.caffemodel
 vendor/saiv/image_understanding/db/aig_detector/aig_detector_cnn.prototxt
-vendor/saiv/image_understanding/db/COMMON_CPU_BV3.0FV/5.8.3/food_verifier_cnn.prototxt
-vendor/saiv/image_understanding/db/COMMON_CPU_BV3.0FV/5.8.3/food_verifier_cnn_light.caffemodel
-vendor/saiv/image_understanding/db/COMMON_CPU_BV3.0PV/5.8.3/movie_poster_verifier_cnn.prototxt
-vendor/saiv/image_understanding/db/COMMON_CPU_BV3.0PV/5.8.3/movie_poster_verifier_cnn_light.caffemodel
-vendor/saiv/image_understanding/db/COMMON_CPU_BV3.0TV/5.8.3/text_verifier_cnn.prototxt
-vendor/saiv/image_understanding/db/COMMON_CPU_BV3.0TV/5.8.3/text_verifier_cnn_light.caffemodel
-vendor/saiv/image_understanding/db/COMMON_CPU_BV3.0WV/5.8.3/wine_verifier_cnn.prototxt
-vendor/saiv/image_understanding/db/COMMON_CPU_BV3.0WV/5.8.3/wine_verifier_cnn_light.caffemodel
+vendor/saiv/image_understanding/db/COMMON_CPU__BV3.0FV/5.8.3/food_verifier_cnn.prototxt
+vendor/saiv/image_understanding/db/COMMON_CPU__BV3.0FV/5.8.3/food_verifier_cnn_light.caffemodel
+vendor/saiv/image_understanding/db/COMMON_CPU__BV3.0PV/5.8.3/movie_poster_verifier_cnn.prototxt
+vendor/saiv/image_understanding/db/COMMON_CPU__BV3.0PV/5.8.3/movie_poster_verifier_cnn_light.caffemodel
+vendor/saiv/image_understanding/db/COMMON_CPU__BV3.0TV/5.8.3/text_verifier_cnn.prototxt
+vendor/saiv/image_understanding/db/COMMON_CPU__BV3.0TV/5.8.3/text_verifier_cnn_light.caffemodel
+vendor/saiv/image_understanding/db/COMMON_CPU__BV3.0WV/5.8.3/wine_verifier_cnn.prototxt
+vendor/saiv/image_understanding/db/COMMON_CPU__BV3.0WV/5.8.3/wine_verifier_cnn_light.caffemodel
 vendor/saiv/image_understanding/db/QC_DSP_1.33.2_BV3.0OD/5.8.3/slens_detector_cnn.dlc
-vendor/saiv/image_understanding/db/QC_NPU_1.33.2_BV3.0CLS/5.8.3/slens_detector_cnn.dlc
+vendor/saiv/image_understanding/db/QC_NPU_1.33.2_BV3.0CLS/5.8.3/slens_classifier_cnn.dlc
 
 # Radio - IMS
 #etc/permissions/rcsopenapi_library.xml
@@ -985,16 +641,7 @@ vendor/lib/com.qualcomm.qti.uceservice@2.1.so
 vendor/lib64/com.qualcomm.qti.uceservice@2.1.so
 
 # Keymaster
-vendor/lib/libkeymasterdeviceutils.so
-vendor/lib/libkeymasterprovision.so
-vendor/lib/libkeymasterutils.so
-vendor/lib/libqtikeymaster4.so
 vendor/lib64/libkeymaster_helper_vendor.so
-vendor/lib64/libkeymasterdeviceutils.so
-vendor/lib64/libkeymasterprovision.so
-vendor/lib64/libkeymasterutils.so
-vendor/lib64/libqtikeymaster4.so
-vendor/lib64/libqtikeymaster4support.so
 -vendor/lib64/libskeymaster4device.so
 
 # Listen
@@ -1017,7 +664,6 @@ vendor/lib64/liblistensoundmodel2.so
 # Machine Learning
 vendor/etc/lm/AdaptLaunchFeature.xml
 vendor/lib64/liblearningmodule.so
-vendor/lib64/libmeters-ns.so
 vendor/lib64/libmeters.so
 vendor/lib64/libreffeature.so
 
@@ -1047,7 +693,6 @@ vendor/lib/libOmxG711Dec.so|30897aea96877de3675c64c8331c8866ccbe95d7
 vendor/lib/libOmxQcelp13Dec.so|65be772b151ed5dd7d59c9cecb1d782e2dc37cea
 vendor/lib/libOmxSwVdec.so|9781af8025ab85eec690fdf9a3b0d889ccdbc6d9
 vendor/lib/libOmxSwVencMpeg4.so|0a2c6d749811b35a2820822a63cbf41b63b860d5
-vendor/lib/libOmxVideoDSMode.so|84776832be0abdd67c8eac8a3b833ac226a451cc
 vendor/lib/libOmxVpp.so|2e4e6af361b2a72eea6526898ceacba0ec6eb0d3
 vendor/lib/libdsd2pcm.so|0488e2eb6bbb32f44d7b92e66284db8cad653459
 vendor/lib/libmm-color-convertor.so|449e9a9f602d2c6e0dac187b254e81f8241935dc
@@ -1128,9 +773,6 @@ vendor/lib/libqti-perfd.so
 vendor/lib/libqti-util.so
 vendor/lib/libqti-utils.so
 vendor/lib/vendor.qti.hardware.perf@2.0.so
-vendor/lib64/libadaptlaunch.so
-vendor/lib64/libappclassifier.so
-vendor/lib64/libgameoptfeature.so
 vendor/lib64/libperfgluelayer.so
 vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
@@ -1140,22 +782,9 @@ vendor/lib64/vendor.qti.hardware.perf@2.0.so
 
 # Peripheral manager
 vendor/bin/pm-proxy
-vendor/bin/pm_proxy_helper
 vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
-
-# Qualcomm Display calibration
-vendor/etc/qdcm_calib_data_Dual_Sharp_WQHD_cmd_mode_dsi_panel.xml
-vendor/etc/qdcm_calib_data_Dual_Sharp_wqhd_video_mode_dsi_panel.xml
-vendor/etc/qdcm_calib_data_hx83112a_video_mode_dsi_truly_panel.xml
-vendor/etc/qdcm_calib_data_nt35695b_truly_fhd_command_mode_dsi_panel.xml
-vendor/etc/qdcm_calib_data_nt35695b_truly_fhd_video_mode_dsi_panel.xml
-vendor/etc/qdcm_calib_data_sw43404_amoled_boe_fhd+_panel_with_DSC.xml
-vendor/etc/qdcm_calib_data_sw43404_amoled_cmd_mode_dsi_boe_panel_with_DSC.xml
-vendor/etc/qdcm_calib_data_sw43404_amoled_video_mode_dsi_boe_panel_with_DSC.xml
-vendor/etc/qdcm_calib_data_td4328_cmd_mode_dsi_truly_panel.xml
-vendor/etc/qdcm_calib_data_td4328_video_mode_dsi_truly_panel.xml
 
 # Qualcomm MSM Interface
 vendor/bin/irsc_util
@@ -1193,7 +822,6 @@ etc/permissions/qcrilhook.xml
 framework/embmslibrary.jar|980832af89ed59120b7362ddb56d3120bb6b2239
 framework/qcrilhook.jar|6304669bf24599d1ae45fe7d9b13b5ba58273bd1
 vendor/bin/ATFWD-daemon
-vendor/bin/hw/vendor.samsung.hardware.radio.configsvc@1.0-service
 vendor/bin/netmgrd
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
@@ -1202,16 +830,12 @@ vendor/bin/rmt_storage
 vendor/bin/tftp_server
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
-vendor/etc/init/vendor.samsung.hardware.radio.configsvc@1.0-service.rc
 vendor/lib/libconfigdb.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
 vendor/lib/libnetmgr.so
 vendor/lib/libnetmgr_common.so
-vendor/lib/libnetmgr_nr_fusion.so
-vendor/lib/libnetmgr_rmnet_ext.so
-vendor/lib/libnlnetmgr.so
 vendor/lib/libpdmapper.so
 vendor/lib/libpdnotifier.so
 vendor/lib/libqcmaputils.so
@@ -1220,12 +844,7 @@ vendor/lib/libqsocket.so
 -vendor/lib/libril.so
 vendor/lib/libsec-ril-dsds.so
 vendor/lib/libsec-ril.so
-vendor/lib/vendor.samsung.hardware.radio.channel@1.0.so
-vendor/lib/vendor.samsung.hardware.radio.secbridge@1.0.so
-vendor/lib/vendor.samsung.hardware.radio.sechook@1.0.so
 vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so
-vendor/lib/vendor.samsung.hardware.radio.secbridge@2.0.so
-vendor/lib/vendor.samsung.hardware.radio.sechook@2.0.so
 vendor/lib/libxml.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/libdsi_netctrl.so
@@ -1233,8 +852,6 @@ vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/libnetmgr.so
 vendor/lib64/libnetmgr_common.so
-vendor/lib64/libnetmgr_nr_fusion.so
-vendor/lib64/libnetmgr_rmnet_ext.so
 vendor/lib64/libnlnetmgr.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
@@ -1247,58 +864,30 @@ vendor/lib64/libsec-ril.so
 vendor/lib64/vendor.qti.hardware.data.connection@1.0.so
 vendor/lib64/vendor.qti.hardware.data.connection@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
-vendor/lib64/vendor.samsung.hardware.radio.channel@1.0.so
-vendor/lib64/vendor.samsung.hardware.radio.configsvc@1.0_vendor.so
-vendor/lib64/vendor.samsung.hardware.radio.secbridge@1.0.so
-vendor/lib64/vendor.samsung.hardware.radio.sechook@1.0.so
 vendor/lib64/libxml.so
 
 # Samsung - Misc
-vendor/bin/vendor.samsung.security.sem@1.0-service
-vendor/bin/vendor.samsung.security.skpm@1.0-service
-vendor/bin/vendor.samsung.security.drk@2.0-service
-vendor/bin/vendor.samsung.security.sem@2.0-service
-vendor/bin/vendor.samsung.security.skpm@2.0-service
-vendor/etc/init/vendor.samsung.security.sem@1.0-service.rc
-vendor/etc/init/vendor.samsung.security.skpm@1.0-service.rc
-vendor/etc/init/vendor.samsung.security.drk@2.0-service.rc
-vendor/etc/init/vendor.samsung.security.sem@2.0-service.rc
-vendor/etc/init/vendor.samsung.security.skpm@2.0-service.rc
 vendor/lib/libsecnativefeature.so
-vendor/lib/vendor.samsung.security.drk@2.0_vendor.so
 vendor/lib64/libsecnativefeature.so
-vendor/lib64/vendor.samsung.security.drk@2.0_vendor.so
-vendor/lib64/vendor.samsung.security.sem@1.0.so
-vendor/lib64/vendor.samsung.security.skpm@1.0.so
 
 # Samsung - Process Authenticator
-vendor/bin/vendor.samsung.security.proca@2.0-service
 vendor/etc/init/pa_daemon_qsee.rc
 vendor/etc/process_authenticator/pa_config
 vendor/lib/libpadm.so
 vendor/lib/libpa.so
-vendor/lib/vendor.samsung.security.proca@2.0.so
 vendor/lib64/libpadm.so
 vendor/lib64/libpa.so
-vendor/lib64/vendor.samsung.security.proca@2.0.so
 
 # Samsung - Secure Storage
 vendor/bin/secure_storage_daemon
 vendor/etc/init/secure_storage_daemon_qsee.rc
 vendor/lib/libsecure_storage.so
-vendor/lib/vendor.samsung.hardware.external.securestorage@3.0.so
+vendor/lib/vendor.samsung.hardware.security.securestorage@3.0.so
 vendor/lib64/libsecure_storage.so
-vendor/lib64/vendor.samsung.hardware.external.securestorage@3.0.so
-
-# Samsung - VaultKeeper
-vendor/lib64/libsec_vaultkeeper_serverHal.so
-vendor/lib64/vendor.samsung.security.vaultkeeper@1.0.so
-vendor/bin/vendor.samsung.security.vaultkeeper@1.0-service
+vendor/lib64/vendor.samsung.hardware.security.securestorage@3.0.so
 
 # Sensors
 vendor/bin/factory.ssc
-vendor/bin/sensors.qti
-vendor/bin/sscrpcd
 vendor/etc/sensors/config/ak991x_dri_0.json
 vendor/etc/sensors/config/sdmmagpie_ak991x_0.json
 vendor/etc/sensors/config/sdmmagpie_ak991x_mst_0.json
@@ -1331,16 +920,6 @@ vendor/etc/sensors/config/sns_smd.json
 vendor/etc/sensors/config/sns_tilt.json
 vendor/etc/sensors/config/sns_tilt_sw_disabled.json
 vendor/etc/sensors/config/sns_tilt_sw_enabled.json
-vendor/etc/sensors/config/talos_ak991x_0.json
-vendor/etc/sensors/config/talos_ak991x_1.json
-vendor/etc/sensors/config/talos_ak991x_mst_0.json
-vendor/etc/sensors/config/talos_ak991x_mst_1.json
-vendor/etc/sensors/config/talos_ak991x_nfc_0.json
-vendor/etc/sensors/config/talos_ak991x_nfc_1.json
-vendor/etc/sensors/config/talos_lsm6dsm_0.json
-vendor/etc/sensors/config/talos_power_0.json
-vendor/etc/sensors/config/talos_stk3x3x_0.json
-vendor/etc/sensors/config/talos_tcs3407_0.json
 vendor/etc/sensors/sns_reg_config
 vendor/lib/libsensorlistener.so
 vendor/lib/libsensorndkbridge.so
