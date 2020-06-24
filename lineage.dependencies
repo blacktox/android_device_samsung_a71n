@@ -1,5 +1,8 @@
 [
   {
-    "target_path": "kernel/samsung/sm6150"
+    "remote": "github",
+    "repository": "firemax13/android_kernel_samsung_sm6150_r1q",
+    "target_path": "kernel/samsung/sm6150",
+    "revision": "modified-dev"
   }
 ]
