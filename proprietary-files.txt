@@ -9,14 +9,17 @@ vendor/lib64/libadsprpc.so
 vendor/lib64/libmdsprpc.so
 
 # ADSP Modules
+vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libcamera_nn_skel.so
+vendor/lib/rfsa/adsp/libcvpdsp_skel.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libdsp_streamer_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
 vendor/lib/rfsa/adsp/libhexagon_nn_skel_secondary.so
 vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
+vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/rfsa/adsp/libsnpe_dsp_v65_domains_v2_skel.so
 vendor/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
@@ -26,9 +29,9 @@ vendor/lib/rfsa/adsp/libVC1Dec.so
 
 # ANT+
 lib/com.qualcomm.qti.ant@1.0.so
--lib/libantradio.so
+lib/libantradio.so
 lib64/com.qualcomm.qti.ant@1.0.so
--lib64/libantradio.so
+lib64/libantradio.so
 vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
 vendor/lib/com.qualcomm.qti.ant@1.0.so
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
@@ -145,6 +148,8 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 
 # Camera
 lib/libchromaflash.so
+lib/libseemore.so
+lib64/libchromaflash.so
 lib64/libseemore.so
 vendor/bin/hw/vendor.samsung.hardware.camera.provider@3.0-service
 vendor/etc/init/vendor.samsung.hardware.camera.provider@3.0-service.rc
@@ -282,7 +287,6 @@ vendor/lib64/camera/components/com.qti.node.stich.so
 vendor/lib64/camera/components/com.qti.node.swregistration.so
 vendor/lib64/camera/components/com.qti.stats.afd.so
 vendor/lib64/camera/components/com.qti.stats.asd.so
-vendor/lib64/camera/components/com.qti.stats.haf.so
 vendor/lib64/camera/components/com.qti.stats.hafoverride.so
 vendor/lib64/camera/components/com.qti.stats.pdlibsony.so
 vendor/lib64/camera/components/com.qti.stats.pdlibwrapper.so
@@ -460,6 +464,9 @@ vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
 vendor/lib/libwvhidl.so
 
 # DRM - Widevine key provisioning
+vendor/bin/vendor.samsung.hardware.security.widevine.keyprovisioning@1.0-service
+vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprovisioning@1.0-service.rc
+vendor/lib64/vendor.samsung.hardware.security.widevine.keyprovisioning@1.0.so
 vendor/bin/wvkprov
 
 # Fingerprint
@@ -473,8 +480,10 @@ vendor/lib64/libsynaFpSensorTestNwd.so
 # FM
 lib/fm_helium.so
 lib/libfm-hci.so
+lib/vendor.qti.hardware.fm@1.0.so
 lib64/fm_helium.so
 lib64/libfm-hci.so
+lib64/vendor.qti.hardware.fm@1.0.so
 vendor/lib/ftm_fm_lib.so
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/ftm_fm_lib.so
@@ -524,13 +533,13 @@ vendor/lib64/libhdr_tm.so|653d7c4ef473b70944bad4b174df5cad5cf1e7a0
 vendor/lib/libqseed3.so|3f5349b43a9ee95b5be090f150120ba895d6fba3
 vendor/lib/libsdm-color.so|fbbb70b83145b1d9dd728901b726d3b02b7f6b2a
 vendor/lib/libsdm-diag.so|15c2cce9f17b532682a94258f6d69beb6e4c5446
--vendor/lib/libsdm-disp-vndapis.so|bd830761476443ae2e4f6b83b0b5aec3616476a6
+vendor/lib/libsdm-disp-vndapis.so|bd830761476443ae2e4f6b83b0b5aec3616476a6
 vendor/lib/libsdmextension.so|a7b44943c53ccb992711650c9061e6b831263c15
 vendor/lib/libtinyxml2_1.so|32aed353a883557299083374b40bacc9f4a228a3
 vendor/lib64/libqseed3.so|fb17af6d01fbbb8aae45f31ae80cb4492bf19d13
 vendor/lib64/libsdm-color.so|72a82d90e5986edb3531ead900e66260e6b0d605
 vendor/lib64/libsdm-diag.so|55d076d00f3d2f770f092cdb30cf01013667fffa
--vendor/lib64/libsdm-disp-vndapis.so|5f35b6463fca61173f6fe4130f6da3183c53269c
+vendor/lib64/libsdm-disp-vndapis.so|5f35b6463fca61173f6fe4130f6da3183c53269c
 vendor/lib64/libsdmextension.so|53b6371f68b23808f64a5e857df50f15dafe39d4
 vendor/lib64/libtinyxml2_1.so|0019bedf2e12642fe4113093bc5a5590f6f5021b
 
@@ -605,14 +614,9 @@ vendor/firmware/a630_gmu.bin
 vendor/firmware/a630_sqe.fw
 
 # Image Understanding
-vendor/saiv/image_understanding/db/aic_classifier/aic_classifier_cnn.info
-vendor/saiv/image_understanding/db/aic_classifier/aic_classifier_cnn_light.caffemodel
-vendor/saiv/image_understanding/db/aic_classifier/aic_classifier_cnn.prototxt
 vendor/saiv/image_understanding/db/aic_classifier/aic_classifier_cnn.dlc
 vendor/saiv/image_understanding/db/aic_classifier/aic_classifier_cnn_tmp.info
-vendor/saiv/image_understanding/db/aic_detector/aic_detector_cnn.info
-vendor/saiv/image_understanding/db/aic_detector/aic_detector_cnn_light.caffemodel
-vendor/saiv/image_understanding/db/aic_detector/aic_detector_cnn.prototxt
+vendor/saiv/image_understanding/db/aic_detector/aic_detector_cnn_tmp.info
 vendor/saiv/image_understanding/db/aic_detector/aic_detector_cnn.dlc
 vendor/saiv/image_understanding/db/aig_classifier/aig_classifier_cnn_light.caffemodel
 vendor/saiv/image_understanding/db/aig_classifier/aig_classifier_cnn.prototxt
@@ -641,8 +645,10 @@ vendor/lib/com.qualcomm.qti.uceservice@2.1.so
 vendor/lib64/com.qualcomm.qti.uceservice@2.1.so
 
 # Keymaster
+vendor/lib64/libkeymaster4.so
 vendor/lib64/libkeymaster_helper_vendor.so
--vendor/lib64/libskeymaster4device.so
+vendor/lib64/libkeymaster4support.so
+vendor/lib64/libskeymaster4device.so
 
 # Listen
 vendor/lib/libadpcmdec.so
@@ -679,7 +685,7 @@ vendor/lib/libApeSwDec.so|0364256befc49c87652d5d5562ab9e77ca794ba4
 vendor/lib/libFileMux_proprietary.so|6c73256c2ab8113ec50a741425a66cc9586a20df
 vendor/lib/libFlacSwDec.so|dde3936e2e54913b098e10e0b4c10f68000a429d
 vendor/lib/libI420colorconvert.so|7ede0ffd3d6466872ba3baac6b0f5bcd5d65fe15
--vendor/lib/libMpeg4SwEncoder.so|48eaef104ce83be8fd7ca73f8df24ca644064c12
+vendor/lib/libMpeg4SwEncoder.so|48eaef104ce83be8fd7ca73f8df24ca644064c12
 vendor/lib/libOmxAacDec.so|4f501e92e1d4488adabfc7b16f86a56d7384b34f
 vendor/lib/libOmxAlacDec.so|b6b4ef14aa687d87713232aa9c76ec936f7ed6ab
 vendor/lib/libOmxAlacDecSw.so|2b2aaa07672b37e8d44c0547978c9ba4b281bace
@@ -819,8 +825,8 @@ vendor/lib64/libqmiservices.so
 # Radio
 etc/permissions/embms.xml
 etc/permissions/qcrilhook.xml
-framework/embmslibrary.jar|980832af89ed59120b7362ddb56d3120bb6b2239
-framework/qcrilhook.jar|6304669bf24599d1ae45fe7d9b13b5ba58273bd1
+framework/embmslibrary.jar
+framework/qcrilhook.jar
 vendor/bin/ATFWD-daemon
 vendor/bin/netmgrd
 vendor/bin/qrtr-cfg
@@ -841,10 +847,13 @@ vendor/lib/libpdnotifier.so
 vendor/lib/libqcmaputils.so
 vendor/lib/libqrtr.so
 vendor/lib/libqsocket.so
--vendor/lib/libril.so
+vendor/lib/libril.so
 vendor/lib/libsec-ril-dsds.so
 vendor/lib/libsec-ril.so
+vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
 vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/lib/libxml.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/libdsi_netctrl.so
@@ -858,19 +867,27 @@ vendor/lib64/libpdnotifier.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
--vendor/lib64/libril.so
+vendor/lib64/libril.so
 vendor/lib64/libsec-ril-dsds.so
 vendor/lib64/libsec-ril.so
+vendor/lib/vendor.qti.hardware.data.connection@1.0.so
+vendor/lib/vendor.qti.hardware.data.connection@1.1.so
 vendor/lib64/vendor.qti.hardware.data.connection@1.0.so
 vendor/lib64/vendor.qti.hardware.data.connection@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 vendor/lib64/libxml.so
 
 # Samsung - Misc
+vendor/bin/hw/vendor.samsung.hardware.security.drk@2.0-service
+vendor/etc/init/vendor.samsung.hardware.security.drk@2.0-service.rc
+vendor/lib64/vendor.samsung.hardware.security.drk@2.0.so
 vendor/lib/libsecnativefeature.so
 vendor/lib64/libsecnativefeature.so
 
 # Samsung - Process Authenticator
+vendor/bin/vendor.samsung.hardware.security.proca@2.0-service
+vendor/lib/vendor.samsung.hardware.security.proca@2.0.so
+vendor/lib64/vendor.samsung.hardware.security.proca@2.0.so
 vendor/etc/init/pa_daemon_qsee.rc
 vendor/etc/process_authenticator/pa_config
 vendor/lib/libpadm.so
@@ -885,6 +902,11 @@ vendor/lib/libsecure_storage.so
 vendor/lib/vendor.samsung.hardware.security.securestorage@3.0.so
 vendor/lib64/libsecure_storage.so
 vendor/lib64/vendor.samsung.hardware.security.securestorage@3.0.so
+
+# Samsung - VaultKeeper
+vendor/bin/vaultkeeperd
+vendor/bin/vendor.samsung.hardware.security.vaultkeeper@1.0-service
+vendor/lib64/vendor.samsung.hardware.security.vaultkeeper@1.0.so
 
 # Sensors
 vendor/bin/factory.ssc
