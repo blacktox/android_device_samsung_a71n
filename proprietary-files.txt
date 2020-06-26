@@ -763,6 +763,10 @@ vendor/bin/hw/vendor.samsung.hardware.miscpower@2.0-service
 vendor/etc/init/vendor.samsung.hardware.miscpower@2.0-service.rc
 vendor/etc/powerhint.xml
 vendor/lib64/vendor.samsung.hardware.miscpower@2.0.so
+vendor/bin/hw/android.hardware.power@1.0-service
+vendor/lib64/hw/android.hardware.power@1.0-impl.so
+vendor/lib/hw/android.hardware.power@1.0-impl.so
+vendor/etc/init/android.hardware.power@1.0-service.rc
 
 # Power - Perf
 vendor/bin/hw/vendor.qti.hardware.perf@2.0-service
