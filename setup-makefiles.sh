@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=r1q
+DEVICE=a71n
 VENDOR=samsung
 
 INITIAL_COPYRIGHT_YEAR=2019
