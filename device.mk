@@ -3,13 +3,13 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-# android_device_samsung_r1q
+# android_device_samsung_a71n
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/r1q/r1q-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/a71n/a71n-vendor.mk)
 
 # Get non-open-source specific aspects (if porting use this instead)
-# $(call inherit-product-if-exists, vendor/samsung/r1q_ported/r1q-vendor.mk)
+# $(call inherit-product-if-exists, vendor/samsung/a71n_ported/a71n-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -170,8 +170,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint feature
 PRODUCT_PACKAGES += \
-    vendor.samsung.hardware.biometrics.fingerprint@2.1-service.r1q \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.r1q
+    vendor.samsung.hardware.biometrics.fingerprint@2.1-service.a71n \
+    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.a71n
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
@@ -235,7 +235,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.samsung-r1q
+    vendor.lineage.livedisplay@2.0-service.samsung-a71n
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -332,7 +332,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.3-radio-service.r1q \
+    android.hardware.radio@1.3-radio-service.a71n \
     vendor.samsung.hardware.radio@2.0.vendor \
     android.hardware.radio.config@1.0 \
     libjson \
@@ -348,7 +348,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensor
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl.r1q \
+    android.hardware.sensors@1.0-impl.a71n \
     android.hardware.sensors@1.0-service
 
 # Sensor Configuration
