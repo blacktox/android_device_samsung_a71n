@@ -12,7 +12,7 @@ BUILD_BROKEN_DUP_RULES := true
 BOARD_VENDOR := samsung
 
 # Path of Device
-DEVICE_PATH := device/samsung/r1q
+DEVICE_PATH := device/samsung/a71n
 
 # Architecture
 TARGET_ARCH := arm64
@@ -65,7 +65,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/samsung/sm6150
-TARGET_KERNEL_CONFIG := r1q_eur_open_defconfig
+TARGET_KERNEL_CONFIG := sm7150_sec_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 
 # Platform
@@ -191,8 +191,8 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_r1q
-TARGET_RECOVERY_DEVICE_MODULES := libinit_r1q
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_a71n
+TARGET_RECOVERY_DEVICE_MODULES := libinit_a71n
 
 # Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
@@ -237,7 +237,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 BOARD_ROOT_EXTRA_FOLDERS := efs omr
 
 # Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_r1q
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_a71n
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # RenderScript
@@ -248,7 +248,7 @@ BOARD_PROVIDES_LIBRIL := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security
-VENDOR_SECURITY_PATCH := 2020-02-01
+VENDOR_SECURITY_PATCH := 2020-04-01
 
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
@@ -268,4 +268,4 @@ WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
--include vendor/samsung/r1q/BoardConfigVendor.mk
+-include vendor/samsung/a71n/BoardConfigVendor.mk
