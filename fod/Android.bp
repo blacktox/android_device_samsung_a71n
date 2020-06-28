@@ -17,8 +17,8 @@ cc_binary {
     vendor: true,
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.r1q",
-    init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.r1q.rc"],
+    name: "vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.a71n",
+    init_rc: ["vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.a71n.rc"],
     srcs: ["service.cpp", "FingerprintInscreen.cpp"],
     shared_libs: [
         "libbase",
