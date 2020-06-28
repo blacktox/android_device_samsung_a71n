@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#define LOG_TAG "vendor.samsung.hardware.biometrics.fingerprint@2.1-service.r1q"
+#define LOG_TAG "vendor.samsung.hardware.biometrics.fingerprint@2.1-service.a71n"
 
 #include <android-base/logging.h>
 

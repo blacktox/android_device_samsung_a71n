@@ -1,5 +1,5 @@
 
-service vendor.fps_hal /vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@2.1-service.r1q
+service vendor.fps_hal /vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@2.1-service.a71n
     # "class hal" causes a race condition on some devices due to files created
     # in /data. As a workaround, postpone startup until later in boot once
     # /data is mounted.
